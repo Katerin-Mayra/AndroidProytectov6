@@ -7,9 +7,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">LOGIN</string>
-    <string name="menu_gallery">restaurante</string>
-    <string name="menu_slideshow">menus</string>
+    <string name="menu_home">inicio</string>
+    <string name="menu_gallery">galeria</string>
+    <string name="menu_slideshow">sillog</string>
+    <string name="menu_login">Login</string>
+    <string name="menu_restaurante">Restaurante</string>
+
     <string name="title_activity_ver__restaurante">Ver_Restaurante</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -21,4 +24,10 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_imagen1">imagen1</string>
     <string name="title_activity_login">login</string>
+
+    <string name="title_InicioR">InicioR</string>
+    <string name="title_Restaurante">Restaurante</string>
+    <string name="title_Menu">Menu</string>
+
+
 </resources>

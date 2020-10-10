@@ -30,6 +30,7 @@ public class login extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        //getSupportActionBar().hide();
 
     }
 

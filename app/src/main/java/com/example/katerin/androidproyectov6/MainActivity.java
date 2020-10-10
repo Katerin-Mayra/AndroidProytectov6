@@ -45,12 +45,16 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,R.id.nav_login,R.id.nav_restaurante)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        //ICONO
+        this.getSupportActionBar().setDisplayShowHomeEnabled(true);
+        this.getSupportActionBar().setIcon(R.drawable.ic_home_black_24dp);
+
 
         Toast.makeText(this, "OnCreate",Toast.LENGTH_LONG).show();
         loadcomponents();
@@ -59,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private void loadcomponents() {
         Ver_Restaurante=this.findViewById(R.id.restaurantes);
         login=this.findViewById(R.id.login);
+
 
         Ver_Restaurante.setOnClickListener((new View.OnClickListener() {
             @Override
@@ -76,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }));
+
 
         /*imagen1.setOnClickListener((new View.OnClickListener() {
             @Override

@@ -27,5 +27,9 @@ public class Ver_Restaurante extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        //ICONO
+        this.getSupportActionBar().setDisplayShowHomeEnabled(true);
+        this.getSupportActionBar().setIcon(R.drawable.ic_home_black_24dp);
+        //getSupportActionBar().hide(); ///oculta la barra de navegacion
     }
 }

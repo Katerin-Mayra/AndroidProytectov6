@@ -22,4 +22,14 @@
         android:name="com.example.katerin.androidproyectov6.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <activity
+        android:id="@+id/nav_login"
+        android:name="com.example.katerin.androidproyectov6.login"
+        android:label="@string/menu_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/nav_restaurante"
+        android:name="com.example.katerin.androidproyectov6.Ver_Restaurante"
+        android:label="@string/menu_restaurante"
+        tools:layout="@layout/activity_ver__restaurante" />
 </navigation>
