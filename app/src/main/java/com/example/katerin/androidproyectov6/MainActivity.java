@@ -22,6 +22,8 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     Button login,Ver_Restaurante;
+    Button registrarse;
+    Button registrar_restaurante;
     static final int code_camera=999;
     private MainActivity root=this;
     private AppBarConfiguration mAppBarConfiguration;
@@ -62,13 +64,36 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadcomponents() {
         Ver_Restaurante=this.findViewById(R.id.restaurantes);
+        registrarse = findViewById(R.id.register2);
         login=this.findViewById(R.id.login);
+        registrar_restaurante=this.findViewById(R.id.Registrar_Restaurante);
+
+        registrar_restaurante.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent registrar_restauranteActivity =new Intent(root,Registrar_Restaurant.class);
+                root.startActivity(registrar_restauranteActivity);
+            }
+
+        });
+
+
+        registrarse.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent Registrar_UsuarioActivity =new Intent(root,Registrar_Usuario.class);
+                root.startActivity(Registrar_UsuarioActivity);
+            }
+
+        });
 
 
         Ver_Restaurante.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Ver_RestauranteActivity =new Intent(root,Ver_Restaurante.class);
+                Intent Ver_RestauranteActivity =new Intent(root,Ver_Restaurante1.class);
                 root.startActivity(Ver_RestauranteActivity);
 
             }

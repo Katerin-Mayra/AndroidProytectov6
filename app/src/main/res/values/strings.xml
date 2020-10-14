@@ -28,6 +28,9 @@
     <string name="title_InicioR">InicioR</string>
     <string name="title_Restaurante">Restaurante</string>
     <string name="title_Menu">Menu</string>
-
+    <string name="sdsfsdfsdf">sdsfsdfsdf</string>
+    <string name="title_activity_info__restaurante">Info_Restaurante</string>
+    <string name="Estado">Estado</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

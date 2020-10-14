@@ -10,12 +10,12 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
-public class Ver_Restaurante extends AppCompatActivity {
+public class Info_Restaurante extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ver__restaurante);
+        setContentView(R.layout.activity_info__restaurante);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -27,9 +27,5 @@ public class Ver_Restaurante extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        //ICONO
-        this.getSupportActionBar().setDisplayShowHomeEnabled(true);
-        this.getSupportActionBar().setIcon(R.drawable.ic_home_black_24dp);
-        //getSupportActionBar().hide(); ///oculta la barra de navegacion
     }
 }
