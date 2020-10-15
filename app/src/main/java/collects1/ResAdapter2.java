@@ -53,7 +53,7 @@ public class ResAdapter2 extends BaseAdapter {
         ImageView image = (ImageView) convertView.findViewById (R.id.imagerestaurant2);
 
 
-        final String id;
+
         if(restaurants.get(position).getImagen().equals("No IMAGE")){
             Glide.with(context)
                     .load("https://image.freepik.com/vector-gratis/plantilla-fondo-menu-restaurante_23-2147490036.jpg")
@@ -64,6 +64,8 @@ public class ResAdapter2 extends BaseAdapter {
         nombre.setText (this.restaurants.get (position).getNombre ());
         calle.setText(this.restaurants.get(position).getCalle());
         telefono.setText(this.restaurants.get(position).getTelefono());
+
+        final String id;
         id = this.restaurants.get(position).getId();
 
 

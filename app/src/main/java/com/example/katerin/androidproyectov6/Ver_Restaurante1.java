@@ -2,10 +2,7 @@ package com.example.katerin.androidproyectov6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -13,18 +10,13 @@ import com.example.katerin.androidproyectov6.adapter1.EsRestaurante;
 import com.example.katerin.androidproyectov6.adapter1.ResAdapter1;
 import com.example.katerin.androidproyectov6.apiResfull.ResApi;
 import com.example.katerin.androidproyectov6.apiResfull.onLoadData;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.Struct;
 import java.util.ArrayList;
 
-import collects1.ResAdapter;
-import collects1.Restaurants;
 import cz.msebera.android.httpclient.Header;
 
 public class Ver_Restaurante1 extends AppCompatActivity implements onLoadData {
@@ -45,7 +37,7 @@ public class Ver_Restaurante1 extends AppCompatActivity implements onLoadData {
 
             }
         });*/
-        listares = findViewById(R.id.lisrestaurant);
+        listares = findViewById(R.id.lisrestaurant2);
         ResApi api= new ResApi(this);
         api.loadRes();
         /*
@@ -96,6 +88,9 @@ public class Ver_Restaurante1 extends AppCompatActivity implements onLoadData {
                 }else{
                     item.setImagen("");
                 }
+
+                item.setId(data.getJSONObject(i).getString("_id"));
+
 
 
 

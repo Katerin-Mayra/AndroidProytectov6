@@ -9,6 +9,7 @@ public class Data {
     public static  String  REGISTER_MENUS = HOST + "/menus";
     public static  String  REGISTER_CLIENTE = HOST + "/cliente";
     public static  String  REGISTER_LOGIN = HOST + "/login";
+    public static  String  REGISTER_delete = HOST + "/cliente";
     public static String ID_User="0";
     public static String ID_RESTORANT="0";
 

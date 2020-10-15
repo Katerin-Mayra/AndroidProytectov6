@@ -73,42 +73,42 @@ public class Admi1 extends AppCompatActivity {
             }
         });
 
-        /*
+
         edicuenta1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent t=new Intent(Admi1.this,EditarAdmi.class);
+                Intent t=new Intent(Admi1.this,Editar_Admin1.class);
                 t.putExtra("email",email.getText());
                 t.putExtra("nombre",nombre.getText());
                 t.putExtra("ci", ci.getText());
                 t.putExtra("telefono",telefono.getText());
                 t.putExtra("tipo",tipo.getText());
                 startActivity(t);
-                */
+
                 /*Bundle b=getIntent().getExtras();
                 Toast.makeText(getApplicationContext(),b.getString("nombreMod")+"",Toast.LENGTH_LONG).show();*/
 
-        /*   }
-        });*/
+            }
+        });
 
-        /*
+
         elicuenta1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 sedData();
-                startActivity(new Intent(Admi1.this,login.class));
+                startActivity(new Intent(Admi1.this,MainActivity.class));
 
             }
         });
 
-*/
+
 
     }
 
     private void sedData() {
         final AsyncHttpClient client = new AsyncHttpClient();
-        client.delete(Data.REGISTER_CLIENTE+"/"+Data.ID_User, new JsonHttpResponseHandler() {
+        client.delete(Data.REGISTER_delete+"/"+Data.ID_User, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
                     String message = response.getString("message");

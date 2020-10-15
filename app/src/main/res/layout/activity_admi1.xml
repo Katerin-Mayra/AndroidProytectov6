@@ -7,6 +7,20 @@
     android:background="@drawable/telon_de_teatro_cortina_ciego_cubierta_protectora_antecedentes"
     tools:context=".Admi1">
 
+    <ImageButton
+        android:id="@+id/atrasVR6"
+        android:layout_width="65dp"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/fotoperfil"
         android:layout_width="127dp"
@@ -16,14 +30,14 @@
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134"
+        app:layout_constraintVertical_bias="0.268"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/nombre2"
         android:layout_width="227dp"
         android:layout_height="40dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/rectangle"
         android:text="Nombre"
@@ -148,5 +162,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edicuenta1"
         app:layout_constraintVertical_bias="0.246" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="203dp"
+        android:layout_height="46dp"
+        android:text="Administrador"
+        android:textColor="#FBFBFB"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.331"
+        app:layout_constraintStart_toEndOf="@+id/atrasVR6"
+        tools:layout_editor_absoluteY="28dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,18 +14,18 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import collects1.ResAdapter;
+import collects1.ResAdapter2;
 import collects1.Restaurants;
 import cz.msebera.android.httpclient.Header;
 
 public class Ver_Restaurante2 extends AppCompatActivity {
     ListView listares;
-    ArrayList<Restaurants> restaurants=new ArrayList<Restaurants>();
+    ArrayList<Restaurants> restaurants=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver__restaurante2);
-        listares = findViewById(R.id.lisrestaurant);
+        listares = findViewById(R.id.lisrestaurant2);
         loadComponents();
     }
 
@@ -73,7 +73,7 @@ public class Ver_Restaurante2 extends AppCompatActivity {
                         //menus.setFoto(object.getString("foto"));
                         restaurants.add(res);
                     }
-                    ResAdapter adapter =  new ResAdapter(Ver_Restaurante2.this,restaurants);
+                    ResAdapter2 adapter =  new ResAdapter2(Ver_Restaurante2.this,restaurants);
                     listares.setAdapter(adapter);
 
 

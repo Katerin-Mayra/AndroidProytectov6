@@ -94,7 +94,7 @@ public class Registrar_Restaurant extends AppCompatActivity {
 
         if (name.length()!=0 && nit.length()!=0 && street.length()!=0 && phone.length()!=0  && property.length()!=7) {
             Toast.makeText(this, "Se Registro Correctamente", Toast.LENGTH_SHORT).show();
-            startActivity (new Intent(Registrar_Restaurant.this, login.class));
+            startActivity (new Intent(Registrar_Restaurant.this, MainActivity.class));
 
 
         }

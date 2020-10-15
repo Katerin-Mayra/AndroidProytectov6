@@ -11,11 +11,7 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.katerin.androidproyectov6.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+
 
     <fragment
         android:id="@+id/nav_slideshow"
@@ -29,7 +25,12 @@
         tools:layout="@layout/activity_login" />
     <activity
         android:id="@+id/nav_restaurante"
-        android:name="com.example.katerin.androidproyectov6.Ver_Restaurante"
+        android:name="com.example.katerin.androidproyectov6.Ver_Restaurante1"
         android:label="@string/menu_restaurante"
-        tools:layout="@layout/activity_ver__restaurante" />
+        tools:layout="@layout/activity_registrar__restaurant" />
+    <activity
+        android:id="@+id/nav_registrar_Usuario"
+        android:name="com.example.katerin.androidproyectov6.Registrar_Usuario"
+        android:label="@string/menu_registro_Usuario"
+        tools:layout="@layout/activity_registrar__usuario" />
 </navigation>

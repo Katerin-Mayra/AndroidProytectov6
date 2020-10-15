@@ -14,72 +14,85 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/cubiertos_en_la_mesa">
+            android:background="@drawable/e_commerce_taobao_summer_food">
 
             <ImageView
                 android:id="@+id/imagerestaurant2"
-                android:layout_width="129dp"
-                android:layout_height="129dp"
+                android:layout_width="97dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@android:drawable/stat_sys_headset" />
 
             <TextView
                 android:id="@+id/nombrestaurant2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_width="217dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:hint="nombre 1"
+                android:textAlignment="center"
                 android:textColor="@color/colorAccent"
                 android:textSize="24sp"
+                android:textStyle="normal|bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.32"
+                app:layout_constraintHorizontal_bias="0.098"
                 app:layout_constraintStart_toEndOf="@+id/imagerestaurant2"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/telefonorestaurant2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="73dp"
+                android:layout_height="26dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="@font/abril_fatface"
                 android:hint="nobre 2"
+                android:textAlignment="center"
                 android:textColor="@color/colorAccent3"
                 android:textSize="18sp"
+                android:textStyle="normal|bold|italic"
                 app:layout_constraintStart_toEndOf="@+id/imagerestaurant2"
                 app:layout_constraintTop_toBottomOf="@+id/nombrestaurant2" />
 
             <TextView
                 android:id="@+id/callerestaurant2"
-                android:layout_width="91dp"
+                android:layout_width="100dp"
                 android:layout_height="22dp"
                 android:layout_marginTop="8dp"
-                android:text="TextView"
+                android:hint="direccion"
+                android:textAlignment="center"
+                android:textColor="#FFFEFE"
                 android:textSize="18sp"
+                android:textStyle="normal|bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintHorizontal_bias="0.478"
                 app:layout_constraintStart_toEndOf="@+id/telefonorestaurant2"
                 app:layout_constraintTop_toBottomOf="@+id/nombrestaurant2" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/editarRES"
                 android:layout_width="100dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/rectangle"
-                android:text="Button"
-                tools:layout_editor_absoluteX="155dp"
-                tools:layout_editor_absoluteY="81dp" />
+                android:text="Editar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/eliminarRES" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/eliminarRES"
                 android:layout_width="100dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/rectangle"
-                android:text="Button"
-                tools:layout_editor_absoluteX="277dp"
-                tools:layout_editor_absoluteY="81dp" />
+                android:text="ELIMINAR"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

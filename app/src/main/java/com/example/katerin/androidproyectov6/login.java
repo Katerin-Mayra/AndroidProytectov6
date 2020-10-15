@@ -115,8 +115,8 @@ public class login extends AppCompatActivity {
                             intent.putExtra("tipo",tipo);
                             startActivity(intent);
                             finish();
-                        }/*else{
-                            Intent intent =new Intent(login.this, Cliente.class);
+                        }else{
+                            Intent intent =new Intent(login.this, Cliente1.class);
                             intent.putExtra("email",correo);
                             intent.putExtra("nombre",nombre);
                             intent.putExtra("ci",ci);
@@ -124,7 +124,7 @@ public class login extends AppCompatActivity {
                             intent.putExtra("tipo",tipo);
                             startActivity(intent);
                             finish();
-                        }*/
+                        }
 
 
 
