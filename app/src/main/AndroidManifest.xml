@@ -16,7 +16,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Editar_Admin1"></activity>
+        <activity android:name=".VerMenu"></activity>
+        <activity android:name=".Pedidos" />
+        <activity android:name=".Menu" />
+        <activity android:name=".MapsActivity" />
+        <activity android:name=".Lugar" />
+        <activity android:name=".InfoPedidos" />
+        <activity android:name=".FotoRestaurante" />
+        <activity android:name=".EliminarMenu" />
+        <activity android:name=".EditarMenu" />
+        <activity android:name=".Editar_Cliente" />
+        <activity android:name=".Editar1" />
+        <activity android:name=".CrearMenu" />
+        <activity android:name=".Carrito" />
+        <activity android:name=".Info_Restaurante" />
+        <activity android:name=".Editar_Admin1" />
         <activity android:name=".Cliente1" />
         <activity android:name=".Registrar_Usuario" />
         <activity android:name=".Ver_Restaurante2" />
@@ -24,10 +38,6 @@
         <activity android:name=".Admi1" />
         <activity android:name=".Registrar_Restaurant" />
         <activity android:name=".EditarRestaurant" />
-        <activity
-            android:name=".Info_Restaurante"
-            android:label="@string/title_activity_info__restaurante"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".login"
             android:label="@string/title_activity_login"

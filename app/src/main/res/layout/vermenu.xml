@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/verimgproducto"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vernombreproducto"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/verdescripcionproducto"
+        android:layout_alignLeft="@+id/verdescripcionproducto"
+        android:layout_alignTop="@+id/verimgproducto"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@+id/verprecioproducto"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffb64100"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/bs"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toEndOf="@+id/verimgproducto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/verprecioproducto"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="@+id/bs"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:layout_toStartOf="@+id/bs"
+        android:text="precio"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ff0fa01d"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/verdescripcionproducto"
+        app:layout_constraintTop_toBottomOf="@+id/vernombreproducto" />
+
+    <TextView
+        android:id="@+id/bs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/verprecioproducto"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:text="Bs"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/verdescripcionproducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vernombreproducto"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
+        android:layout_toRightOf="@+id/verimgproducto"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ff6a6a6a"
+        android:textSize="10dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

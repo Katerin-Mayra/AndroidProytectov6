@@ -1,33 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/black_simple_steak_roasted_steak_psd_layered_h5_background_material"
     tools:context=".Info_Restaurante">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <TextView
+        android:id="@+id/calleIR"
+        android:layout_width="209dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:text="Calle"
+        android:textColor="#000000"
+        android:textColorHint="#ccc"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreIR"
+        tools:ignore="MissingConstraints" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="156dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="236dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        tools:ignore="MissingConstraints" />
 
-    <include layout="@layout/content_info__restaurante" />
+    <TextView
+        android:id="@+id/nombreIR"
+        android:layout_width="209dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:text="Nombre"
+        android:textColor="#000000"
+        android:textColorHint="#ccc"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
+        android:id="@+id/propertyIR"
+        android:layout_width="209dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:text="Propietario"
+        android:textColor="#000000"
+        android:textColorHint="#ccc"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoIR"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/telefonoIR"
+        android:layout_width="209dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:text="Telefono"
+        android:textColor="#000000"
+        android:textColorHint="#ccc"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calleIR"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/crearmenuIR"
+        android:layout_width="149dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/rectangle"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:text="Crear menu"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/propertyIR"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/vermenuIR"
+        android:layout_width="149dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/rectangle"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="20dp"
+        android:text="Ver menu"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/propertyIR"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/elimenuIR"
+        android:layout_width="149dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/rectangle"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:text="Eliminar menu"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vermenuIR"
+        app:layout_constraintVertical_bias="0.117" />
+
+    <Button
+        android:id="@+id/editarmenuIR"
+        android:layout_width="149dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Editar menu"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crearmenuIR"
+        app:layout_constraintVertical_bias="0.117"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginTop="28dp"
+        android:text="Informacion de Restaurante"
+        android:textColor="#E8E6E6"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

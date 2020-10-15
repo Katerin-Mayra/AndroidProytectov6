@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    >
+
+    <ImageView
+        android:id="@+id/imgproducto"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/precioproducto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nombreproducto"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/descripcionproducto"
+        android:layout_alignLeft="@+id/descripcionproducto"
+        android:layout_alignTop="@+id/imgproducto"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@+id/precioproducto"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffb64100"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="168dp" />
+
+    <TextView
+        android:id="@+id/precioproducto"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="@+id/bs"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="80dp"
+        android:layout_toStartOf="@+id/bs"
+        android:text="precio"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ff0fa01d"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/descripcionproducto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/precioproducto"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Bs"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nombreproducto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descripcionproducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombreproducto"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@+id/imgproducto"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ff6a6a6a"
+        android:textSize="10dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/borrarproducto"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/borrarproducto"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@+id/precioproducto"
+        android:layout_alignStart="@+id/precioproducto"
+        android:layout_alignLeft="@+id/precioproducto"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="84dp"
+        android:text="borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreproducto" />
+</androidx.constraintlayout.widget.ConstraintLayout>

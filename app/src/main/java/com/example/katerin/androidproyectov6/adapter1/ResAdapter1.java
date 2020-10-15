@@ -86,9 +86,10 @@ public class ResAdapter1 extends BaseAdapter {
             Button editar = convertView.findViewById(R.id.editarRES);
             id = this.LISTRESTAURANT.get(position).getId();
             eliminar.setOnClickListener(new View.OnClickListener() {
+
                 @Override
                 public void onClick(View v) {
-
+                   // Toast.makeText(this,"eliminado",Toast.LENGTH_SHORT).show();
 /*
                     AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     // Add the buttons
@@ -110,7 +111,10 @@ public class ResAdapter1 extends BaseAdapter {
 
                     AlertDialog dialog = builder.create();*/
                     //dialog.show();
+                    Toast.makeText(context, "eliminado el restaurante id ="+id, Toast.LENGTH_LONG).show();
                     deleteMenu(id);
+
+
                 }
 
 

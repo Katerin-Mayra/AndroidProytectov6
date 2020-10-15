@@ -1,8 +1,8 @@
 package com.example.katerin.androidproyectov6;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,47 +21,40 @@ import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
-public class EditarRestaurant extends AppCompatActivity {
-    TextView nombre1,telefono1,calle1;
-    String nombreres,telefonores,calleres;
+public class Editar_Cliente extends AppCompatActivity {
     Button guardar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar_restaurant);
+        setContentView(R.layout.activity_editar__cliente);
+        guardar = findViewById(R.id.guardar);
+        final TextView nombre=(TextView) findViewById(R.id.nombre3);
+        nombre.setText( getIntent().getExtras().getString("nombre"));
+        final TextView ci=(TextView) findViewById(R.id.ci3);
+        ci.setText( getIntent().getExtras().getString("ci"));
+        final TextView telefono=(TextView) findViewById(R.id.phone3);
+        telefono.setText( getIntent().getExtras().getString("telefono"));
+        final TextView email=(TextView) findViewById(R.id.correo3);
+        email.setText( getIntent().getExtras().getString("email"));
+        final TextView tipo=(TextView) findViewById(R.id.tipo);
 
-        nombre1 = findViewById(R.id.namerestorantED);
-        telefono1 = findViewById(R.id.phonerestorantED);
-        calle1 = findViewById(R.id.streetrestorantED);
-        informacion();
-        guardar = findViewById(R.id.guardarestorantED);
         guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sedData();
+
+
+
             }
         });
-
-
-
-    }
-
-    public void informacion() {
-        Intent intent = getIntent();
-
-        nombreres = intent.getStringExtra("nombre");
-        telefonores = intent.getStringExtra("telefono");
-        calleres = intent.getStringExtra("calle");
-
-        nombre1.setText(nombreres);
-        telefono1.setText(telefonores);
-        calle1.setText(calleres);
     }
     public void sedData() {
-        TextView  nombre4 = findViewById(R.id.namerestorantED);
-        TextView telefono4 = findViewById(R.id.phonerestorantED);
-        TextView calle4 = findViewById(R.id.streetrestorantED);
+        TextView nombre3 = findViewById(R.id.nombre3);
+        TextView ci3 = findViewById(R.id.ci3);
+        TextView telefono3 = findViewById(R.id.phone3);
+        TextView email3 = findViewById(R.id.correo3);
+
 
         AsyncHttpClient client = new AsyncHttpClient();
         //client.addHeader("authorization", Data.TOKEN);
@@ -69,45 +62,49 @@ public class EditarRestaurant extends AppCompatActivity {
 
         RequestParams params = new RequestParams();
 
-        params.put("nombre", nombre4.getText().toString());
-        params.put("telefono", telefono4.getText().toString());
-        params.put("calle", calle4.getText().toString());
-        Toast.makeText(getApplicationContext(),Data.REGISTER_RESTORANT+"/"+Data.ID_RESTORANT,Toast.LENGTH_LONG).show();
-        client.put(Data.REGISTER_RESTORANT+"/"+Data.ID_RESTORANT, params, new JsonHttpResponseHandler() {
+        params.put("nombre", nombre3.getText().toString());
+        params.put("ci", ci3.getText().toString());
+        params.put("telefono", telefono3.getText().toString());
+        params.put("email", email3.getText().toString());
+        Toast.makeText(getApplicationContext(),Data.REGISTER_CLIENTE+"/"+Data.ID_User,Toast.LENGTH_LONG).show();
+        client.put(Data.REGISTER_CLIENTE+"/"+Data.ID_User, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
 
 
-                AlertDialog alertDialog = new AlertDialog.Builder(EditarRestaurant.this).create();
+                AlertDialog alertDialog = new AlertDialog.Builder(Editar_Cliente.this).create();
                 try {
                     int resp = response.getInt("resp");
 
                     if (resp == 200) {
                         String msn = response.getString("msn");
                         JSONObject json = response.getJSONObject("dato");
-                        final String nombre4_resp = json.getString("nombre");
-                        final String telefono4_resp = json.getString("telefono");
-                        final String calle4_resp = json.getString("calle");
-
+                        final String nombre3_resp = json.getString("nombre");
+                        final String ci3_resp = json.getString("ci");
+                        final String telefono3_resp = json.getString("telefono");
+                        final String email3_resp = json.getString("email");
 
                         alertDialog.setTitle("Mensaje");
                         alertDialog.setMessage(msn);
                         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent intent = new Intent(EditarRestaurant.this, Ver_Restaurante1.class);
-                                intent.putExtra("nombre", nombre4_resp);
-                                intent.putExtra("telefono", telefono4_resp);
-                                intent.putExtra("email", calle4_resp);
+                                Intent intent = new Intent(Editar_Cliente.this, Cliente1.class);
+                                intent.putExtra("nombre", nombre3_resp);
+                                intent.putExtra("ci", ci3_resp);
+                                intent.putExtra("telefono", telefono3_resp);
+                                intent.putExtra("email", email3_resp);
+                                intent.putExtra("tipo",Data.Tipo);
+
 
                                 startActivity(intent);
-
+                                finish();
                             }
                         });
                         alertDialog.show();
                     } else {
                         alertDialog.setTitle("Mensaje");
-                        alertDialog.setMessage("Error al editar los datos");
+                        alertDialog.setMessage("Error al tratar de crear nuevo restaurant");
                         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -126,7 +123,4 @@ public class EditarRestaurant extends AppCompatActivity {
 
         });
     }
-
-
-
 }

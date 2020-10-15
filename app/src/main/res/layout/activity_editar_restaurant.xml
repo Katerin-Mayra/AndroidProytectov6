@@ -4,57 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/food_h5_background"
     tools:context=".EditarRestaurant">
 
 
+    <ImageView
+        android:id="@+id/fotoperfil3"
+        android:layout_width="91dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nit"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageButton
+        android:id="@+id/atrasVR7"
+        android:layout_width="65dp"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="328dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/namerestorantED"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="248dp"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toTopOf="@+id/phonerestorantED"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.896"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.826" />
+        app:layout_constraintVertical_bias="0.801" />
 
     <EditText
         android:id="@+id/phonerestorantED"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="248dp"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Telefono"
         android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/streetrestorantED"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/namerestorant" />
 
     <EditText
         android:id="@+id/streetrestorantED"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="248dp"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Calle"
         android:inputType="textPersonName"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/MapView1ED"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phonerestorant" />
 
@@ -65,7 +114,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="68dp"
         app:layout_constraintBottom_toTopOf="@+id/guardarestorantED"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -75,18 +124,31 @@
 
     <Button
         android:id="@+id/guardarestorantED"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="269dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="144dp"
+        android:background="@drawable/rectangle"
         android:text="Guardar Restaurant"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MapView1"
         app:layout_constraintVertical_bias="0.731"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="82dp" />
 
-
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="265dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:text="Editar Restaurante"
+        android:textColor="#FDFCFC"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

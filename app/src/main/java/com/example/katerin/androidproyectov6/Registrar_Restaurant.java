@@ -113,8 +113,8 @@ public class Registrar_Restaurant extends AppCompatActivity {
         RequestParams params = new RequestParams();
         params.add("name", name.getText().toString());
         params.add("nit", nit.getText().toString());
-        params.add("property", street.getText().toString());
-        params.add("street", property.getText().toString());
+        params.add("property", property.getText().toString());
+        params.add("street", street.getText().toString());
         params.add("phone", phone.getText().toString());
        ///// params.add("lat", String.valueOf(""));
         //params.add("lon", String.valueOf(""));
