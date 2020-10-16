@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button login,Ver_Restaurante;
     Button registrarse;
     Button registrar_restaurante;
-    Button menus;
+    Button menus,registrarMenu;
     static final int code_camera=999;
     private MainActivity root=this;
     private AppBarConfiguration mAppBarConfiguration;
@@ -69,6 +69,17 @@ public class MainActivity extends AppCompatActivity {
         login=this.findViewById(R.id.login);
         registrar_restaurante=this.findViewById(R.id.Registrar_Restaurante);
         menus=this.findViewById(R.id.menus);
+        registrarMenu=this.findViewById(R.id.registroMenus);
+
+        registrarMenu.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent registrar_restauranteActivity =new Intent(root,CrearMenu.class);
+                root.startActivity(registrar_restauranteActivity);
+            }
+
+        });
 
         menus.setOnClickListener(new View.OnClickListener() {
 

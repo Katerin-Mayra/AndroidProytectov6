@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.katerin.androidproyectov6.adapter2.EsMenu;
 import com.example.katerin.androidproyectov6.utils.Data;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -35,7 +36,7 @@ public class CrearMenu extends AppCompatActivity {
     ImageView imagen;
 
     ListView listcrear;
-    ArrayList<Menus> list_data = new ArrayList<Menus> ();
+    ArrayList<EsMenu> list_data = new ArrayList<> ();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class CrearMenu extends AppCompatActivity {
         precio = findViewById(R.id.precioproducto);
         descripcion = findViewById(R.id.descripcion);
         aceptar = findViewById (R.id.aceptar);
-        imagen = findViewById (R.id.fotomenu);
+       // imagen = findViewById (R.id.fotomenu);
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +58,7 @@ public class CrearMenu extends AppCompatActivity {
         });
 
 
-        loadComponents();
+       // loadComponents();
 
     }
 
@@ -67,7 +68,7 @@ public class CrearMenu extends AppCompatActivity {
         final EditText nombre  = findViewById(R.id.producto);
         final EditText precio  = findViewById(R.id.precioproducto);
         final EditText descripcion = findViewById(R.id.descripcion);
-        final ImageView image = findViewById (R.id.fotomenu);
+        //final ImageView image = findViewById (R.id.fotomenu);
 
         if (nombre.getText().toString().equals("") || precio.getText().toString().equals("") || descripcion.getText().toString().equals("")){
             Toast.makeText(this, "Los campos no pueden estar vacios", Toast.LENGTH_SHORT).show();
@@ -104,7 +105,7 @@ public class CrearMenu extends AppCompatActivity {
                         nombre.getText().clear();
                         precio.getText().clear();
                         descripcion.getText().clear();
-                        loadComponents();
+                        //loadComponents();
 
                     }
                 } catch (JSONException e) {
@@ -115,7 +116,7 @@ public class CrearMenu extends AppCompatActivity {
 
 
         });
-    }
+    }/*
     private void loadComponents() {
         AsyncHttpClient client = new AsyncHttpClient ();
         client.get ("http://192.168.100.180:8000/api/1.0/menus",  new JsonHttpResponseHandler(){
@@ -149,5 +150,5 @@ public class CrearMenu extends AppCompatActivity {
 
         });
 
-    }
+    }*/
 }
