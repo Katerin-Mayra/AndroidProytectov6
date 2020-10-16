@@ -8,80 +8,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
-    <Button
-        android:id="@+id/Registrar_Restaurante"
-        android:layout_width="236dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="204dp"
-        android:background="#E14F4F"
-        android:text="Registrar Restaurante"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/nav_host_fragment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menus"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/register2"
-        android:layout_width="151dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="188dp"
-        android:background="#E14F4F"
-        android:text="REGISTER"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menus"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="117dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="68dp"
-        android:background="#E14F4F"
-        android:text="LOGIN"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/register2"
-        app:layout_constraintHorizontal_bias="0.294"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menus"
-        app:layout_constraintVertical_bias="0.408" />
-
-    <Button
-        android:id="@+id/menus"
-        android:layout_width="236dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="224dp"
-        android:background="#E14F4F"
-        android:text="MENUS"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantes" />
-
-    <Button
-        android:id="@+id/restaurantes"
-        android:layout_width="236dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="392dp"
-        android:background="#E14F4F"
-        android:text="RESTAURANTES"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment" />
-
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -93,5 +19,85 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
+
+    <Button
+        android:id="@+id/registroMenus"
+        android:layout_width="236dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="248dp"
+        android:background="#E14F4F"
+        android:text="CREAR MENUS"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Registrar_Restaurante"
+        android:layout_width="236dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="40dp"
+        android:background="#E14F4F"
+        android:text="Registrar Restaurante"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/menus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/register2"
+        android:layout_width="151dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="96dp"
+        android:background="#E14F4F"
+        android:text="REGISTER USUARIO"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="117dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="100dp"
+        android:background="#E14F4F"
+        android:text="LOGIN"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/register2"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/menus"
+        android:layout_width="236dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="48dp"
+        android:background="#E14F4F"
+        android:text="MENUS"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/registroMenus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/restaurantes"
+        android:layout_width="236dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="52dp"
+        android:background="#E14F4F"
+        android:text="RESTAURANTES"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Registrar_Restaurante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,8 +22,8 @@
         android:id="@+id/nombrestaurant"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/callerestaurant2"
-        android:layout_alignLeft="@+id/callerestaurant2"
+        android:layout_alignStart="@+id/descripcionVM"
+        android:layout_alignLeft="@+id/descripcionVM"
         android:layout_alignTop="@+id/imagerestaurant"
         android:layout_marginEnd="21dp"
         android:layout_toStartOf="@+id/telefonorestaurant"
@@ -46,7 +46,7 @@
         android:textSize="15dp" />
 
     <TextView
-        android:id="@+id/callerestaurant2"
+        android:id="@+id/descripcionVM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nombrestaurant"
@@ -76,7 +76,7 @@
         android:id="@+id/editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/callerestaurant2"
+        android:layout_below="@id/descripcionVM"
         android:layout_marginLeft="34dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="45dp"

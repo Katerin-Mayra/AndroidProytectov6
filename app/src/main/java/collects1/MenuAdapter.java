@@ -65,6 +65,7 @@ public class MenuAdapter extends BaseAdapter {
         descripcion.setText (this.menus.get (position).getDescripcion());
         precio.setText(this.menus.get(position).getPrecio());
         String precio1 = precio.getText().toString();
+
         final Integer pre = Integer.parseInt(precio1);
         pedir.setOnClickListener(new View.OnClickListener() {
 

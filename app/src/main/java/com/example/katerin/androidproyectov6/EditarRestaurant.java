@@ -23,7 +23,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class EditarRestaurant extends AppCompatActivity {
     TextView nombre1,telefono1,calle1;
-    String nombreres,telefonores,calleres;
+    String nombreres,telefonores,calleres,id;
     Button guardar;
 
     @Override
@@ -48,11 +48,12 @@ public class EditarRestaurant extends AppCompatActivity {
     }
 
     public void informacion() {
-        Intent intent = getIntent();
+        Bundle intent = getIntent().getExtras();
 
-        nombreres = intent.getStringExtra("nombre");
-        telefonores = intent.getStringExtra("telefono");
-        calleres = intent.getStringExtra("calle");
+        nombreres = intent.getString("nombre");
+        telefonores = intent.getString("telefono");
+        calleres = intent.getString("calle");
+        id = intent.getString("id");
 
         nombre1.setText(nombreres);
         telefono1.setText(telefonores);
@@ -69,57 +70,25 @@ public class EditarRestaurant extends AppCompatActivity {
 
         RequestParams params = new RequestParams();
 
-        params.put("nombre", nombre4.getText().toString());
-        params.put("telefono", telefono4.getText().toString());
-        params.put("calle", calle4.getText().toString());
-        Toast.makeText(getApplicationContext(),Data.REGISTER_RESTORANT+"/"+Data.ID_RESTORANT,Toast.LENGTH_LONG).show();
-        client.put(Data.REGISTER_RESTORANT+"/"+Data.ID_RESTORANT, params, new JsonHttpResponseHandler() {
+        params.put("name", nombre4.getText().toString());
+        params.put("phone", telefono4.getText().toString());
+        params.put("street", calle4.getText().toString());
+       // Toast.makeText(getApplicationContext(),Data.REGISTER_RESTORANT+"/"+Data.ID_RESTORANT,Toast.LENGTH_LONG).show();
+        client.patch(Data.REGISTER_RESTORANT+"?id="+id ,params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
 
-
-                AlertDialog alertDialog = new AlertDialog.Builder(EditarRestaurant.this).create();
                 try {
-                    int resp = response.getInt("resp");
-
-                    if (resp == 200) {
-                        String msn = response.getString("msn");
-                        JSONObject json = response.getJSONObject("dato");
-                        final String nombre4_resp = json.getString("nombre");
-                        final String telefono4_resp = json.getString("telefono");
-                        final String calle4_resp = json.getString("calle");
-
-
-                        alertDialog.setTitle("Mensaje");
-                        alertDialog.setMessage(msn);
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent intent = new Intent(EditarRestaurant.this, Ver_Restaurante1.class);
-                                intent.putExtra("nombre", nombre4_resp);
-                                intent.putExtra("telefono", telefono4_resp);
-                                intent.putExtra("email", calle4_resp);
-
-                                startActivity(intent);
-
-                            }
-                        });
-                        alertDialog.show();
-                    } else {
-                        alertDialog.setTitle("Mensaje");
-                        alertDialog.setMessage("Error al editar los datos");
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        });
-                        alertDialog.show();
-                    }
+                    String res=response.getString("msn");
+                    Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
+                    Intent  pruebaED=new Intent(EditarRestaurant.this,Ver_Restaurante1.class);
+                    startActivity(pruebaED);
                 } catch (JSONException e) {
+
                     e.printStackTrace();
-                    Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
                 }
+
+
 
             }
 

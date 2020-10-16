@@ -1,7 +1,6 @@
 package com.example.katerin.androidproyectov6.adapter1;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +10,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AlertDialog;
 
 import com.bumptech.glide.Glide;
 import com.example.katerin.androidproyectov6.EditarRestaurant;
@@ -30,10 +27,18 @@ import cz.msebera.android.httpclient.Header;
 public class ResAdapter1 extends BaseAdapter {
      public ArrayList<EsRestaurante> LISTRESTAURANT;
      public Context context;
+     editarRest listem;
+
+     public interface editarRest{
+         void EdRest (String data);
+
+     }
 
     public ResAdapter1(ArrayList<EsRestaurante> data, Context context){
         LISTRESTAURANT=data;
         this.context=context;
+       // this.listem=listem;
+
 
     }
 
@@ -58,16 +63,16 @@ public class ResAdapter1 extends BaseAdapter {
         if(convertView==null){
             convertView = LayoutInflater.from(context).inflate(R.layout.item_listrest1,null);
 
-            final TextView nombre = convertView.findViewById (R.id.nombrestaurant2);
+            final TextView nombre = convertView.findViewById (R.id.nombreVM);
             nombre.setText(LISTRESTAURANT.get(position).getNombre());
 
-            final TextView calle = convertView.findViewById (R.id.callerestaurant2);
+            final TextView calle = convertView.findViewById (R.id.descripcionVM);
             calle.setText(LISTRESTAURANT.get(position).getCalle());
 
-            TextView telefono = convertView.findViewById (R.id.telefonorestaurant2);
+            final TextView telefono = convertView.findViewById (R.id.precioVM);
             telefono.setText(LISTRESTAURANT.get(position).getTelefono());
 
-            ImageView image = convertView.findViewById (R.id.imagerestaurant2);
+            ImageView image = convertView.findViewById (R.id.imagenVM);
             if(LISTRESTAURANT.get(position).getImagen().equals("No IMAGE")){
                 Glide.with(context)
                         .load("https://image.freepik.com/vector-gratis/plantilla-fondo-menu-restaurante_23-2147490036.jpg")
@@ -82,8 +87,8 @@ public class ResAdapter1 extends BaseAdapter {
 
             final String id;
 
-            Button eliminar = convertView.findViewById(R.id.eliminarRES);
-            Button editar = convertView.findViewById(R.id.editarRES);
+            Button eliminar = convertView.findViewById(R.id.eliminarVM);
+            Button editar = convertView.findViewById(R.id.editarVM);
             id = this.LISTRESTAURANT.get(position).getId();
             eliminar.setOnClickListener(new View.OnClickListener() {
 
@@ -123,12 +128,16 @@ public class ResAdapter1 extends BaseAdapter {
             editar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, EditarRestaurant.class);
+                   Intent intent = new Intent(context, EditarRestaurant.class);
 
                 intent.putExtra("nombre",nombre.getText());
-                intent.putExtra("telefono",nombre.getText());
+                intent.putExtra("telefono",telefono.getText());
                 intent.putExtra("calle",calle.getText());
+                intent.putExtra("id",id);
                 context.startActivity(intent);
+/*
+                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
+                listem.EdRest(EDRESTAURANTE);*/
 
                 }
             });

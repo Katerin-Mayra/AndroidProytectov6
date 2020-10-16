@@ -121,7 +121,21 @@ public class Registrar_Usuario extends AppCompatActivity {
         client .post(Data.REGISTER_CLIENTE, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
-                AlertDialog alertDialog = new AlertDialog.Builder(Registrar_Usuario.this).create();
+
+
+                try {
+                    String res=response.getString("msn");
+                    Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
+                   // Intent  pruebaED=new Intent(EditarRestaurant.this,Ver_Restaurante1.class);
+                   // startActivity(pruebaED);
+                } catch (JSONException e) {
+
+                    e.printStackTrace();
+                }
+
+
+
+              /*  AlertDialog alertDialog = new AlertDialog.Builder(Registrar_Usuario.this).create();
                 try {
 
 
@@ -158,7 +172,7 @@ public class Registrar_Usuario extends AppCompatActivity {
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
-                }
+                }*/
             }
 
 

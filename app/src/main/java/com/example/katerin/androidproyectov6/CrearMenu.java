@@ -23,7 +23,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import collects1.BorrarMenuAdapter;
+import collects1.MenuAdapter;
 import collects1.Menus;
+import collects1.VerMenuAdapter;
 import cz.msebera.android.httpclient.Header;
 
 public class CrearMenu extends AppCompatActivity {
@@ -54,75 +56,10 @@ public class CrearMenu extends AppCompatActivity {
             }
         });
 
-        /*if (ContextCompat.checkSelfPermission(CrearMenu.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED &&
-                ActivityCompat.checkSelfPermission(CrearMenu.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(CrearMenu.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1000);
-        }*/
+
         loadComponents();
 
     }
-     /* String mCurrentPhotoPath;
-    @SuppressLint("NewApi")
-    public File createImageFile() throws IOException {
-        // Create an image file name
-        String timeStamp = null;
-
-        timeStamp = new SimpleDateFormat ("yyyyMMdd_HHmmss").format(new Date ());
-
-        String imageFileName = "BACKUP_" + timeStamp + "_";
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File image = File.createTempFile(imageFileName,".jpg", storageDir  );
-
-        // Save a file: path for use with ACTION_VIEW intents
-        mCurrentPhotoPath = image.getAbsolutePath();
-        return image;
-    }
-
-
-    static final int REQUEST_TAKE_PHOTO = 1;
-
-    public void tomarFoto (View view) {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
-            File photoFile = null;
-            try {
-                photoFile = createImageFile();
-            } catch (IOException ex) {
-                // Error occurred while creating the File
-
-            }
-            // Continue only if the File was successfully created
-            if (photoFile != null) {
-                Uri photoURI = FileProvider.getUriForFile(this,
-                        "com.example.android.fileprovider",
-                        photoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-            }
-        }
-    }
-
-
-
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            imagen.setImageBitmap(imageBitmap);
-        }
-    }
-
-    public void galleryAddPic() {
-        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-        File f = new File(mCurrentPhotoPath);
-        Uri contentUri = Uri.fromFile(f);
-        mediaScanIntent.setData(contentUri);
-        this.sendBroadcast(mediaScanIntent);
-    }*/
 
 
 
@@ -131,6 +68,7 @@ public class CrearMenu extends AppCompatActivity {
         final EditText precio  = findViewById(R.id.precioproducto);
         final EditText descripcion = findViewById(R.id.descripcion);
         final ImageView image = findViewById (R.id.fotomenu);
+
         if (nombre.getText().toString().equals("") || precio.getText().toString().equals("") || descripcion.getText().toString().equals("")){
             Toast.makeText(this, "Los campos no pueden estar vacios", Toast.LENGTH_SHORT).show();
             return;
@@ -160,9 +98,6 @@ public class CrearMenu extends AppCompatActivity {
                     String id = response.getString("id");
                     int resp = response.getInt("resp");
 
-
-
-
                     if(resp==200){
                         String msn = response.getString("msn");
 
@@ -183,7 +118,7 @@ public class CrearMenu extends AppCompatActivity {
     }
     private void loadComponents() {
         AsyncHttpClient client = new AsyncHttpClient ();
-        client.get ("http://192.168.1.102:7777/api/v1.0/menus",  new JsonHttpResponseHandler(){
+        client.get ("http://192.168.100.180:8000/api/1.0/menus",  new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
@@ -201,7 +136,7 @@ public class CrearMenu extends AppCompatActivity {
 
                         list_data.add(menus);
                     }
-                    BorrarMenuAdapter adapter =  new BorrarMenuAdapter(CrearMenu.this,list_data);
+                    MenuAdapter adapter =  new MenuAdapter(CrearMenu.this,list_data);
                     listcrear.setAdapter(adapter);
 
 

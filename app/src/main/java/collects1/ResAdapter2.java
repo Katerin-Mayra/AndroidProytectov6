@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -47,10 +46,10 @@ public class ResAdapter2 extends BaseAdapter {
             convertView = inflate.inflate (R.layout.item_listrest1, null);
 
         }
-        final TextView nombre = (TextView)convertView.findViewById (R.id.nombrestaurant2);
-        final TextView calle = (TextView)convertView.findViewById (R.id.callerestaurant2);
-        final TextView telefono = (TextView)convertView.findViewById (R.id.telefonorestaurant2);
-        ImageView image = (ImageView) convertView.findViewById (R.id.imagerestaurant2);
+        final TextView nombre = (TextView)convertView.findViewById (R.id.nombreVM);
+        final TextView calle = (TextView)convertView.findViewById (R.id.descripcionVM);
+        final TextView telefono = (TextView)convertView.findViewById (R.id.precioVM);
+        ImageView image = (ImageView) convertView.findViewById (R.id.imagenVM);
 
 
 

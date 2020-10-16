@@ -49,7 +49,7 @@ public class ResAdapter extends BaseAdapter {
             view = inflate.inflate (R.layout.item_listrest1, null);
         }
         final TextView nombre = (TextView)view.findViewById (R.id.nombrestaurant);
-        final TextView calle = (TextView)view.findViewById (R.id.callerestaurant2);
+        final TextView calle = (TextView)view.findViewById (R.id.descripcionVM);
         final TextView telefono = (TextView)view.findViewById (R.id.telefonorestaurant);
 
         ImageView image = (ImageView) view.findViewById (R.id.imagerestaurant);
