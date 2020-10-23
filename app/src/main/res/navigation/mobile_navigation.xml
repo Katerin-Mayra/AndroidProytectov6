@@ -33,4 +33,5 @@
         android:name="com.example.katerin.androidproyectov6.Registrar_Usuario"
         android:label="@string/menu_registro_Usuario"
         tools:layout="@layout/activity_registrar__usuario" />
+
 </navigation>

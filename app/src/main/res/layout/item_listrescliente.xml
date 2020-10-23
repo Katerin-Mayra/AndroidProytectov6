@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:elevation="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/comida_picante_y_seductor_langosta_mariscos_comida_china_fondo">
+
+            <TextView
+                android:id="@+id/propietarioVM"
+                android:layout_width="120dp"
+                android:layout_height="16dp"
+                android:hint="propietario"
+                android:textAlignment="center"
+                android:textColor="#FFFEFE"
+                android:textSize="10sp"
+                android:textStyle="normal|bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.024"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagenVM" />
+
+            <ImageView
+                android:id="@+id/imagenVM"
+                android:layout_width="97dp"
+                android:layout_height="84dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.347"
+                app:srcCompat="@android:drawable/stat_sys_headset" />
+
+            <TextView
+                android:id="@+id/nombreVM"
+                android:layout_width="290dp"
+                android:layout_height="30dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:hint="nombre 1"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="normal|bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imagenVM"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2" />
+
+            <TextView
+                android:id="@+id/precioVM"
+                android:layout_width="109dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/abril_fatface"
+                android:hint="nobre 2"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent3"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imagenVM"
+                app:layout_constraintTop_toBottomOf="@+id/nombreVM"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/descripcionVM"
+                android:layout_width="155dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="4dp"
+                android:hint="direccion"
+                android:textAlignment="center"
+                android:textColor="#FFFEFE"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.384"
+                app:layout_constraintStart_toEndOf="@+id/precioVM"
+                app:layout_constraintTop_toBottomOf="@+id/nombreVM"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/ver_menuLRC"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="36dp"
+                android:background="@drawable/rectangle"
+                android:text="Ver Menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ver_infoLRC"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.836" />
+
+            <Button
+                android:id="@+id/ver_infoLRC"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:background="@drawable/rectangle"
+                android:text="Info"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.881"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.836" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

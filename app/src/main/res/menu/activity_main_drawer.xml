@@ -12,14 +12,12 @@
             android:id="@+id/nav_registrar_Usuario"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_registro_Usuario" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+
         <item
             android:id="@+id/nav_login"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_login" />
+
         <item
             android:id="@+id/nav_restaurante"
             android:icon="@drawable/ic_menu_slideshow"

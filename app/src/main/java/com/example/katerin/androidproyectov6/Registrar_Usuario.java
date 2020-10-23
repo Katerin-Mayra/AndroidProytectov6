@@ -60,7 +60,7 @@ public class Registrar_Usuario extends AppCompatActivity {
         String correo11 = correo1.getText().toString();
         String password11 = password1.getText().toString();
 
-        if (name1.length() == 0){
+        if (name1.length() ==0){
             Toast.makeText(this, "Debes ingresar un nombre", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -78,13 +78,13 @@ public class Registrar_Usuario extends AppCompatActivity {
             Toast.makeText(this, "Debes ingresar un correo", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (password11.length() <= 7){
-            Toast.makeText(this, "Debes ingresar minimammente 8 caracteres", Toast.LENGTH_SHORT).show();
+        if (password11.length() <= 3){
+            Toast.makeText(this, "Debes ingresar minimammente 6 caracteres", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if (name1.length()!=0 && ci1.length()!=0 && phone1.length()!=0 && correo11.length()!=0  && password11.length()!=7) {
-            Toast.makeText(this, "Se Registro Correctamente", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Se Registro Correctamente los datos", Toast.LENGTH_SHORT).show();
             startActivity (new Intent(Registrar_Usuario.this, login.class));
 
 
@@ -100,7 +100,7 @@ public class Registrar_Usuario extends AppCompatActivity {
         TextView email  = findViewById(R.id.correo1);
         TextView password  = findViewById(R.id.password1);
         Spinner tipo = findViewById(R.id.tipo);
-        if(nombre.length()>5){
+        if(nombre.length()>15){
 
             return;
         }
@@ -124,10 +124,11 @@ public class Registrar_Usuario extends AppCompatActivity {
 
 
                 try {
+
                     String res=response.getString("msn");
                     Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
-                   // Intent  pruebaED=new Intent(EditarRestaurant.this,Ver_Restaurante1.class);
-                   // startActivity(pruebaED);
+                 //  Intent  pruebaED=new Intent(EditarRestaurant.this,Ver_Restaurante1.class);
+                   //startActivity(pruebaED);
                 } catch (JSONException e) {
 
                     e.printStackTrace();

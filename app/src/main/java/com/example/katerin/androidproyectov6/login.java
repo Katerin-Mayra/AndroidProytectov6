@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,13 +28,23 @@ import cz.msebera.android.httpclient.Header;
 public class login extends AppCompatActivity {
     Button btn_login;
     Button registrarse;
-
+    ImageButton atraslogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        /*
+
+       atraslogin = findViewById(R.id.atraslogin);
+
+        atraslogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(login.this,MainActivity.class));
+
+            }
+        });
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -44,12 +55,12 @@ public class login extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });*/
+        });
 
 
-        btn_login = findViewById (R.id.login);
-        /*
-        registrarse = findViewById(R.id.registrarse);
+       btn_login = findViewById (R.id.login);
+
+       /* registrarse = findViewById(R.id.registrarse);
         registrarse.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -58,9 +69,9 @@ public class login extends AppCompatActivity {
                 finish();
             }
 
-        });
-*/
-        btn_login.setOnClickListener(new View.OnClickListener() {
+        });*/
+
+       btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -87,11 +98,11 @@ public class login extends AppCompatActivity {
         login.post(Data.REGISTER_LOGIN, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
-                AlertDialog alertDialog = new AlertDialog.Builder(login.this).create();
-                try {
+                //AlertDialog alertDialog = new AlertDialog.Builder(login.this).create();
+              try {
 
                     int resp = response.getInt("resp");
-                    Toast.makeText(login.this, "respuesta:"+resp, Toast.LENGTH_SHORT).show();
+                   Toast.makeText(login.this, "respuesta:"+resp, Toast.LENGTH_SHORT).show();
                     if(resp==200){
                         JSONObject json=response.getJSONObject("dato");
 
@@ -107,21 +118,23 @@ public class login extends AppCompatActivity {
                         Data.ID_User=id;
                         Data.Tipo=tipo;
                         if(tipo.compareTo("Administrador")==0) {
-                            Intent intent =new Intent(login.this, Admi1.class);
+                           Intent intent =new Intent(login.this, Admi1.class);
                             intent.putExtra("email",correo);
                             intent.putExtra("nombre",nombre);
                             intent.putExtra("ci",ci);
                             intent.putExtra("telefono",telefono);
                             intent.putExtra("tipo",tipo);
+                            intent.putExtra("_id",id);
                             startActivity(intent);
                             finish();
-                        }else{
-                            Intent intent =new Intent(login.this, Cliente1.class);
+                       }else{
+                           Intent intent =new Intent(login.this, Cliente1.class);
                             intent.putExtra("email",correo);
                             intent.putExtra("nombre",nombre);
                             intent.putExtra("ci",ci);
                             intent.putExtra("telefono",telefono);
                             intent.putExtra("tipo",tipo);
+                            intent.putExtra("_id",id);
                             startActivity(intent);
                             finish();
                         }
@@ -129,7 +142,7 @@ public class login extends AppCompatActivity {
 
 
                         //Toast.makeText(login.this, "Login correctamente: "+ token, Toast.LENGTH_SHORT).show();
-                        Toast.makeText(login.this, "Login correctamente: ", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(login.this, "Login correctamente: ", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(login.this, "error de logueo", Toast.LENGTH_SHORT).show();
                     }

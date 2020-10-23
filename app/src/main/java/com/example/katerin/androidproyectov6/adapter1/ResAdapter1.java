@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.katerin.androidproyectov6.EditarRestaurant;
 import com.example.katerin.androidproyectov6.R;
+import com.example.katerin.androidproyectov6.Ventana_Menus_Admi;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -89,6 +90,8 @@ public class ResAdapter1 extends BaseAdapter {
 
             Button eliminar = convertView.findViewById(R.id.eliminarVM);
             Button editar = convertView.findViewById(R.id.editarVM);
+            Button menus = convertView.findViewById(R.id.menusVM3);
+
             id = this.LISTRESTAURANT.get(position).getId();
             eliminar.setOnClickListener(new View.OnClickListener() {
 
@@ -141,6 +144,25 @@ public class ResAdapter1 extends BaseAdapter {
 
                 }
             });
+
+            menus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intentM = new Intent(context, Ventana_Menus_Admi.class);
+
+                    intentM.putExtra("nombre",nombre.getText());
+                    intentM.putExtra("telefono",telefono.getText());
+                    intentM.putExtra("calle",calle.getText());
+                    intentM.putExtra("id",id);
+                    context.startActivity(intentM);
+/*
+                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
+                listem.EdRest(EDRESTAURANTE);*/
+
+                }
+            });
+
+
         }
 
         return convertView;

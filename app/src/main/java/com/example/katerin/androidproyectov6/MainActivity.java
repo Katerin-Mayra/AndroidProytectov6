@@ -21,10 +21,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-    Button login,Ver_Restaurante;
+    Button login,Ver_Restaurante,mapa;
     Button registrarse;
     Button registrar_restaurante;
     Button menus,registrarMenu;
+    Button pedido,registrarPedido;
     static final int code_camera=999;
     private MainActivity root=this;
     private AppBarConfiguration mAppBarConfiguration;
@@ -65,11 +66,37 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadcomponents() {
         Ver_Restaurante=this.findViewById(R.id.restaurantes);
-        registrarse = findViewById(R.id.register2);
-        login=this.findViewById(R.id.login);
+        mapa=this.findViewById(R.id.mapa);
+
+     //   registrarse = findViewById(R.id.register2);
+      //  login=this.findViewById(R.id.login);
+       /*
         registrar_restaurante=this.findViewById(R.id.Registrar_Restaurante);
         menus=this.findViewById(R.id.menus);
         registrarMenu=this.findViewById(R.id.registroMenus);
+        pedido=this.findViewById(R.id.verPedidoMA);
+        registrarPedido=this.findViewById(R.id.registrarPedidoMA);*/
+/*
+        registrarPedido.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent registrar_restauranteActivity =new Intent(root,CrearMenu.class);
+                root.startActivity(registrar_restauranteActivity);
+            }
+
+        });
+
+        pedido.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent registrar_restauranteActivity =new Intent(root,Ver_menus.class);
+                root.startActivity(registrar_restauranteActivity);
+            }
+
+        });
+
 
         registrarMenu.setOnClickListener(new View.OnClickListener() {
 
@@ -100,10 +127,26 @@ public class MainActivity extends AppCompatActivity {
                 root.startActivity(registrar_restauranteActivity);
             }
 
-        });
+        });*/
 
+        Ver_Restaurante.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Ver_RestauranteActivity =new Intent(root,Ver_Restaurante_Cliente.class);
+                root.startActivity(Ver_RestauranteActivity);
 
-        registrarse.setOnClickListener(new View.OnClickListener() {
+            }
+        }));
+        mapa.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pmapa =new Intent(root,pmapa.class);
+                root.startActivity(pmapa);
+
+            }
+        }));
+
+       /* registrarse.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -113,15 +156,8 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+*//*
 
-        Ver_Restaurante.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent Ver_RestauranteActivity =new Intent(root,Ver_Restaurante1.class);
-                root.startActivity(Ver_RestauranteActivity);
-
-            }
-        }));
         login.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 root.startActivity(LoginActivity);
 
             }
-        }));
+        }));*/
 
 
         /*imagen1.setOnClickListener((new View.OnClickListener() {

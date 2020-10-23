@@ -19,11 +19,11 @@ public class ResApi {
         client =new AsyncHttpClient();
 
     }
-    public void loadRes(){
+    public void loadRes(String nick){
         //token //client.addHeader("authorization",UserDataServer.TOKEN);
 
 
-        client.get(Data.REGISTER_RESTORANT,new JsonHttpResponseHandler(){
+        client.get(Data.REGISTER_RESTORANT+"/"+nick,new JsonHttpResponseHandler(){
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 interfaceevent.onJsonArrayLoad(response);
             }

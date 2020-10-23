@@ -22,6 +22,7 @@ import cz.msebera.android.httpclient.Header;
 public class Ver_Restaurante1 extends AppCompatActivity implements onLoadData {
 
     ListView listares;
+    String id;
     ImageButton atrasVR;
     ArrayList<EsRestaurante> datos=new ArrayList<>();
     @Override
@@ -38,8 +39,13 @@ public class Ver_Restaurante1 extends AppCompatActivity implements onLoadData {
             }
         });*/
         listares = findViewById(R.id.lisrestaurant2);
+
+        Bundle intent = getIntent().getExtras();
+        id = intent.getString("_id");
+
         ResApi api= new ResApi(this);
-        api.loadRes();
+        //api.loadRes();
+        api.loadRes(id);
         /*
         for (int i = 0; i < 100; i++) {
             //datos.add("item" + i);

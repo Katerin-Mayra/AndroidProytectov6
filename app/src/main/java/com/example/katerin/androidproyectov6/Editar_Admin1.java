@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,10 +24,21 @@ import cz.msebera.android.httpclient.Header;
 
 public class Editar_Admin1 extends AppCompatActivity {
     Button guardar1;
+String _id;
+    ImageButton atrasEAD;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar__admin1);
+
+        atrasEAD = findViewById(R.id.atrasEAD);
+        atrasEAD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Editar_Admin1.this,Admi1.class));
+
+            }
+        });
 
         final TextView nombre=(TextView) findViewById(R.id.nombre4);
         nombre.setText( getIntent().getExtras().getString("nombre"));
@@ -37,6 +49,10 @@ public class Editar_Admin1 extends AppCompatActivity {
         final TextView email=(TextView) findViewById(R.id.correo4);
         email.setText( getIntent().getExtras().getString("email"));
         final TextView tipo=(TextView) findViewById(R.id.tipo);
+
+        /*
+        final TextView _id=(TextView) findViewById(R.id.idclient2);
+        _id.setText( getIntent().getExtras().getString("_id"));*/
 
         guardar1 = findViewById(R.id.guardar1);
         guardar1.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +69,9 @@ public class Editar_Admin1 extends AppCompatActivity {
         TextView ci4 = findViewById(R.id.ci4);
         TextView telefono4 = findViewById(R.id.phone4);
         TextView email4 = findViewById(R.id.correo4);
-
+       // TextView _id = findViewById(R.id.idclient2);
+        Bundle intent = getIntent().getExtras();
+        _id = intent.getString("_id");
 
         AsyncHttpClient client = new AsyncHttpClient();
         //client.addHeader("authorization", Data.TOKEN);
@@ -65,12 +83,25 @@ public class Editar_Admin1 extends AppCompatActivity {
         params.put("ci", ci4.getText().toString());
         params.put("telefono", telefono4.getText().toString());
         params.put("email", email4.getText().toString());
+
         //Toast.makeText(getApplicationContext(),Data.REGISTER_CLIENTE+"/"+Data.ID_User,Toast.LENGTH_LONG).show();
-        client.put(Data.REGISTER_CLIENTE+"/"+Data.ID_User, params, new JsonHttpResponseHandler() {
+        client.patch(Data.REGISTER_CLIENTE+"?id="+_id, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
 
+                try {
+                    String res=response.getString("msn");
+                    Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
+                    Intent  pruebaED=new Intent(Editar_Admin1.this,login.class);
+                    startActivity(pruebaED);
+                } catch (JSONException e) {
 
+                    e.printStackTrace();
+                }
+
+
+
+              /*
                 AlertDialog alertDialog = new AlertDialog.Builder(Editar_Admin1.this).create();
                 try {
                     int resp = response.getInt("resp");
@@ -115,7 +146,7 @@ public class Editar_Admin1 extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
-                }
+                }*/
 
             }
 

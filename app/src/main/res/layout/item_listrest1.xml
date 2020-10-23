@@ -16,12 +16,23 @@
             android:layout_height="match_parent"
             android:background="@drawable/e_commerce_taobao_summer_food">
 
+            <Button
+                android:id="@+id/menusVM3"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rectangle"
+                android:text="Menus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/editarVM" />
+
             <ImageView
                 android:id="@+id/imagenVM"
-                android:layout_width="97dp"
-                android:layout_height="84dp"
+                android:layout_width="85dp"
+                android:layout_height="63dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@android:drawable/stat_sys_headset" />
@@ -46,37 +57,39 @@
                 android:id="@+id/precioVM"
                 android:layout_width="109dp"
                 android:layout_height="22dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/abril_fatface"
                 android:hint="nobre 2"
                 android:textAlignment="center"
                 android:textColor="@color/colorAccent3"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintStart_toEndOf="@+id/imagenVM"
                 app:layout_constraintTop_toBottomOf="@+id/nombreVM" />
 
             <TextView
                 android:id="@+id/descripcionVM"
-                android:layout_width="155dp"
-                android:layout_height="23dp"
+                android:layout_width="179dp"
+                android:layout_height="21dp"
                 android:layout_marginTop="4dp"
                 android:hint="direccion"
                 android:textAlignment="center"
                 android:textColor="#FFFEFE"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="normal|bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.384"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/precioVM"
-                app:layout_constraintTop_toBottomOf="@+id/nombreVM" />
+                app:layout_constraintTop_toBottomOf="@+id/nombreVM"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/editarVM"
                 android:layout_width="100dp"
                 android:layout_height="32dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/rectangle"
                 android:text="Editar"
@@ -87,7 +100,7 @@
                 android:id="@+id/eliminarVM"
                 android:layout_width="100dp"
                 android:layout_height="32dp"
-                android:layout_marginEnd="28dp"
+                android:layout_marginEnd="4dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/rectangle"
                 android:text="ELIMINAR"

@@ -9,6 +9,10 @@ public class EsRestaurante {
     private String telefono;
     private String imagen;
 
+    //////
+    private String cliente;
+
+////////
     public String getId() {
         return id;
     }
@@ -63,5 +67,13 @@ public class EsRestaurante {
 
     public void setImagen(String imagen) {
         this.imagen = imagen;
+    }
+
+    public String getcliente() {
+        return cliente;
+    }
+
+    public void setcliente(String cliente) {
+        this.cliente = cliente;
     }
 }

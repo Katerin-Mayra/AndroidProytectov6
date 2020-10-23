@@ -2,5 +2,13 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/abril_fatface</item>
+        <item>@font/aguafina_script</item>
+        <item>@font/bilbo_swash_caps</item>
+        <item>@font/bungee_shade</item>
+        <item>@font/kumar_one_outline</item>
+        <item>@font/sunshiney</item>
+        <item>@font/unkempt</item>
+        <item>@font/vast_shadow</item>
+        <item>@font/waiting_for_the_sunrise</item>
     </array>
 </resources>

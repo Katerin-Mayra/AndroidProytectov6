@@ -32,5 +32,6 @@
     <string name="title_activity_info__restaurante">Info_Restaurante</string>
     <string name="Estado">Estado</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_login1">Login1</string>
 
 </resources>

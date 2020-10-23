@@ -12,7 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.katerin.androidproyectov6.EditarMenu;
 import com.example.katerin.androidproyectov6.EditarRestaurant;
+import com.example.katerin.androidproyectov6.Editar_Menu1;
 import com.example.katerin.androidproyectov6.R;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -91,14 +93,24 @@ public class MenuAdapter1 extends BaseAdapter {
 
                     Toast.makeText(context, "eliminado el restaurante id ="+id, Toast.LENGTH_LONG).show();
                     deleteMenu(id);
+                }
+            });
+            editar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, Editar_Menu1.class);
 
+                    intent.putExtra("nombre",nombre.getText());
+                    intent.putExtra("precio",precio.getText());
+                    intent.putExtra("descripcion",descripcion.getText());
+                    intent.putExtra("id",id);
+                    context.startActivity(intent);
+/*
+                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
+                listem.EdRest(EDRESTAURANTE);*/
 
                 }
-
-
-
             });
-
 
         }
 
@@ -114,7 +126,7 @@ public class MenuAdapter1 extends BaseAdapter {
 
         AsyncHttpClient client = new AsyncHttpClient();
 
-        client.delete("http://192.168.100.180:8000/api/1.0/restaurante" + "?id=" + id, new JsonHttpResponseHandler() {
+        client.delete("http://192.168.100.180:8000/api/1.0/menus" + "?id=" + id, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {

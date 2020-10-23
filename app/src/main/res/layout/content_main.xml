@@ -8,6 +8,18 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
+    <ImageView
+        android:id="@+id/fotoperfil8"
+        android:layout_width="68dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596"
+        app:srcCompat="@mipmap/ic_launcher" />
+
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -20,84 +32,135 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
 
-    <Button
-        android:id="@+id/registroMenus"
-        android:layout_width="236dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="248dp"
-        android:background="#E14F4F"
-        android:text="CREAR MENUS"
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="205dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sunshiney"
+        android:text="+ Factura ELectronica"
+        android:textColor="#676C9C"
+        android:textColorHighlight="#1020C5"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/Registrar_Restaurante"
-        android:layout_width="236dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="40dp"
-        android:background="#E14F4F"
-        android:text="Registrar Restaurante"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/menus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/register2"
-        android:layout_width="151dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="96dp"
-        android:background="#E14F4F"
-        android:text="REGISTER USUARIO"
-        android:textSize="24sp"
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="266dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/kumar_one_outline"
+        android:text="Israel Salguero Cavero "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="117dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="100dp"
-        android:background="#E14F4F"
-        android:text="LOGIN"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/register2"
-        app:layout_constraintHorizontal_bias="0.255"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/menus"
-        android:layout_width="236dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="48dp"
-        android:background="#E14F4F"
-        android:text="MENUS"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/registroMenus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="268dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/kumar_one_outline"
+        android:text="Katerin Mayra Parra Alvarez"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/restaurantes"
         android:layout_width="236dp"
         android:layout_height="63dp"
-        android:layout_marginTop="52dp"
-        android:background="#E14F4F"
+        android:background="#471616"
+        android:fontFamily="@font/abril_fatface"
         android:text="RESTAURANTES"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#100F0F"
+        android:textColorLink="#F60707"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/Registrar_Restaurante"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.908"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="117dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="@font/waiting_for_the_sunrise"
+        android:text="POTOSI"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="328dp"
+        android:layout_height="86dp"
+        android:fontFamily="@font/bungee_shade"
+        android:paddingStart="10dp"
+        android:text="App Movil"
+        android:textColor="#C5A7A7"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="219dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="33dp"
+        android:fontFamily="@font/bilbo_swash_caps"
+        android:text="Restaurante"
+        android:textColor="#F4F3F3"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <Button
+        android:id="@+id/mapa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mapa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

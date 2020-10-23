@@ -27,7 +27,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="96dp"
         android:layout_marginTop="16dp"
-        android:text="Restaurantes"
+        android:text="Ver Menus K"
 
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/colorAccent3"

@@ -14,6 +14,26 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/food_h5_background__1_" />
 
+    <EditText
+        android:id="@+id/idclient2"
+        android:layout_width="297dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp"
+        android:textColorHint="#D6DAD0"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:layout_width="413dp"
         android:layout_height="496dp"
@@ -42,7 +62,7 @@
             android:paddingTop="10dp"
             android:paddingRight="20dp"
             android:paddingBottom="5dp"
-            android:textColorHint="#DAF7A6"
+            android:textColorHint="#E2E4DD"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +82,7 @@
             android:paddingTop="10dp"
             android:paddingRight="20dp"
             android:paddingBottom="5dp"
-            android:textColorHint="#DAF7A6"
+            android:textColorHint="#D0D3CB"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +102,7 @@
             android:paddingTop="10dp"
             android:paddingRight="20dp"
             android:paddingBottom="5dp"
-            android:textColorHint="#DAF7A6"
+            android:textColorHint="#D5D8D0"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +122,7 @@
             android:paddingTop="10dp"
             android:paddingRight="20dp"
             android:paddingBottom="5dp"
-            android:textColorHint="#DAF7A6"
+            android:textColorHint="#D7DAD2"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,8 +130,8 @@
 
         <ImageView
             android:id="@+id/fotoperfil2"
-            android:layout_width="127dp"
-            android:layout_height="132dp"
+            android:layout_width="104dp"
+            android:layout_height="101dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -120,20 +140,23 @@
 
         <Button
             android:id="@+id/guardar1"
-            android:layout_width="wrap_content"
+            android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/rectangle"
-            android:backgroundTint="#1A97E8"
+            android:backgroundTint="@color/colorAccent3"
+            android:padding="10dp"
+            android:paddingStart="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
+            android:paddingEnd="10dp"
             android:paddingRight="20dp"
             android:paddingBottom="4dp"
             android:text="Guardar"
-            android:textColor="#ccc"
+            android:textColor="#000000"
             android:textColorHint="#ccc"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -147,15 +170,33 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="206dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="100dp"
-        android:text="Editar Admi"
+        android:layout_width="264dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="64dp"
+        android:text="Editar Administrador"
+        android:textAlignment="center"
         android:textColor="#F1EEEE"
-        android:textSize="36sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <ImageButton
+        android:id="@+id/atrasEAD"
+        android:layout_width="65dp"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

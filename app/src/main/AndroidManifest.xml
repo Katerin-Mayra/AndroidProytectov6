@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +17,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ver_menus"></activity>
+        <activity android:name=".Ver_Pedidos_Menu_Admi"></activity>
+        <activity android:name=".Ver_Menus_Pedido_Admi" />
+        <activity android:name=".Ver_Restaurante_Pedidos_Admi" />
+        <activity android:name=".pmapa" />
+        <activity
+            android:name=".Login1"
+            android:label="@string/title_activity_login1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Ver_Pedidos_Admi" />
+        <activity android:name=".Ver_Menus_Admi" />
+        <activity android:name=".Ventana_Menus_Admi" />
+        <activity android:name=".Info_MenusC" />
+        <activity android:name=".Ver_menus_cliente" />
+        <activity android:name=".Info_RestauranteCA" />
+        <activity android:name=".Ver_Restaurante_Cliente" />
+        <activity android:name=".Crear_Pedido" />
+        <activity android:name=".Ver_Pedido" />
+        <activity android:name=".EditarPedido" />
+        <activity android:name=".Ver_Restaurante_Admi" />
+        <activity android:name=".Editar_Menu1" />
+        <activity android:name=".Ver_menus" />
         <activity android:name=".VerMenu" />
         <activity android:name=".Pedidos" />
         <activity android:name=".Menu" />

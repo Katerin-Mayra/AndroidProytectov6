@@ -8,7 +8,7 @@
     tools:context=".Admi1">
 
     <ImageButton
-        android:id="@+id/atrasVR6"
+        android:id="@+id/atrasAD"
         android:layout_width="65dp"
         android:layout_height="66dp"
         android:layout_alignParentTop="true"
@@ -23,71 +23,71 @@
 
     <ImageView
         android:id="@+id/fotoperfil"
-        android:layout_width="127dp"
-        android:layout_height="134dp"
+        android:layout_width="91dp"
+        android:layout_height="93dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.268"
+        app:layout_constraintVertical_bias="0.315"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/nombre2"
-        android:layout_width="227dp"
+        android:layout_width="295dp"
         android:layout_height="40dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="12dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
         android:text="Nombre"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/tipo"
-        android:layout_width="226dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/correo2"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
-        android:text="Tipo"
-        android:textSize="24sp"
+        android:text="Correo"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.864"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correo2" />
+        app:layout_constraintTop_toBottomOf="@+id/telefono2"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/telefono2"
-        android:layout_width="226dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
         android:text="Telefono"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombre2"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/correo2"
-        android:layout_width="226dp"
-        android:layout_height="37dp"
+        android:id="@+id/tipo"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="20dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
-        android:text="Correo"
-        android:textSize="24sp"
+        android:text="Tipo"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefono2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correo2" />
 
     <TextView
         android:id="@+id/ci2"
@@ -101,54 +101,32 @@
         app:layout_constraintTop_toBottomOf="@+id/nombre2" />
 
     <Button
-        android:id="@+id/verestaurant"
-        android:layout_width="190dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rectangle"
-        android:text="Ver restaurant"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tipo" />
-
-    <Button
         android:id="@+id/crestaurant"
         android:layout_width="190dp"
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/rectangle"
         android:text="Crear restaurant"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tipo" />
-
-    <Button
-        android:id="@+id/edicuenta1"
-        android:layout_width="190dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/rectangle"
-        android:text="Editar cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verestaurant"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crestaurant"
-        app:layout_constraintVertical_bias="0.131" />
+        app:layout_constraintTop_toBottomOf="@+id/tipo"
+        app:layout_constraintVertical_bias="0.092" />
 
     <Button
-        android:id="@+id/elicuenta1"
+        android:id="@+id/verestaurant"
         android:layout_width="190dp"
         android:layout_height="56dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/rectangle"
-        android:text="Eliminar cuenta"
+        android:text="Ver restaurant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verestaurant"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintTop_toBottomOf="@+id/tipo"
+        app:layout_constraintVertical_bias="0.092" />
 
     <Button
         android:id="@+id/irpedidos"
@@ -162,21 +140,71 @@
         android:text="Controlar pedidos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edicuenta1"
-        app:layout_constraintVertical_bias="0.246" />
+        app:layout_constraintVertical_bias="0.271" />
+
+    <Button
+        android:id="@+id/elicuenta1"
+        android:layout_width="190dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rectangle"
+        android:text="Eliminar cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verestaurant"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <Button
+        android:id="@+id/edicuenta1"
+        android:layout_width="190dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rectangle"
+        android:text="Editar cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/elicuenta1"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crestaurant"
+        app:layout_constraintVertical_bias="0.118" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="203dp"
         android:layout_height="46dp"
+        android:layout_marginEnd="84dp"
         android:text="Administrador"
         android:textColor="#FBFBFB"
         android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toEndOf="@+id/atrasVR6"
-        tools:layout_editor_absoluteY="28dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/idadmi"
+        android:layout_width="326dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rectangle"
+        android:paddingStart="10dp"
+        android:text="id"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/nombre2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
