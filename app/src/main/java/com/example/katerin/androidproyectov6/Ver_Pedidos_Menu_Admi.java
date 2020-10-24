@@ -14,6 +14,7 @@ import com.example.katerin.androidproyectov6.adapter5PA.PedAdapterA;
 import com.example.katerin.androidproyectov6.adapterVPedMead.EsPedidoMenAd;
 import com.example.katerin.androidproyectov6.adapterVPedMead.PedMeAdapterA;
 import com.example.katerin.androidproyectov6.apiResfull.PedApi;
+import com.example.katerin.androidproyectov6.apiResfull.PediMApi;
 import com.example.katerin.androidproyectov6.apiResfull.onLoadData;
 
 import org.json.JSONArray;
@@ -28,6 +29,7 @@ public class Ver_Pedidos_Menu_Admi extends AppCompatActivity implements onLoadDa
     ListView listares;
     ImageButton atrasVPC;
     TextView _id;
+    String id;
     ArrayList<EsPedidoMenAd> datos=new ArrayList<>();
 
     @Override
@@ -46,9 +48,12 @@ public class Ver_Pedidos_Menu_Admi extends AppCompatActivity implements onLoadDa
         _id=(TextView) findViewById(R.id.idPediMe);
         _id.setText( getIntent().getExtras().getString("id"));
 
+        Bundle intent = getIntent().getExtras();
+        id = intent.getString("id");
+
         listares = findViewById(R.id.lisrestaurantAdmiP);
-        PedApi api= new PedApi(this);
-        api.loadPed();
+        PediMApi api= new PediMApi(this);
+        api.loadPed(id);
     }
 
     @Override
@@ -88,6 +93,31 @@ public class Ver_Pedidos_Menu_Admi extends AppCompatActivity implements onLoadDa
                     item.setMenus(data.getJSONObject(i).getString("menus"));
                 }else{
                     item.setMenus("");
+                }
+                if(data.getJSONObject(i).has("estado")){
+                    item.setEstado(data.getJSONObject(i).getString("estado"));
+                }else{
+                    item.setEstado("");
+                }
+
+                if(data.getJSONObject(i).has("cliente")){
+                    item.setCliente(data.getJSONObject(i).getString("cliente"));
+                }else{
+                    item.setCliente("");
+                }
+
+                if(data.getJSONObject(i).has("correo")){
+                    item.setCorreo(data.getJSONObject(i).getString("correo"));
+                }else{
+                    item.setCorreo("");
+
+                }
+
+                if(data.getJSONObject(i).has("correoC")){
+                    item.setCorreoC(data.getJSONObject(i).getString("correoC"));
+                }else{
+                    item.setCorreoC("");
+
                 }
 
                 item.setId(data.getJSONObject(i).getString("_id"));

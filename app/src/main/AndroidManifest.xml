@@ -17,7 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ver_Pedidos_Menu_Admi"></activity>
+        <activity android:name=".Ver_Menus_MAIN"></activity>
+        <activity android:name=".Ver_Restaurantes_MAIN" />
+        <activity android:name=".pruebaemail" />
+        <activity android:name=".Registrar_Factura" />
+        <activity android:name=".Ver_Pedidos_Menu_Admi" />
         <activity android:name=".Ver_Menus_Pedido_Admi" />
         <activity android:name=".Ver_Restaurante_Pedidos_Admi" />
         <activity android:name=".pmapa" />

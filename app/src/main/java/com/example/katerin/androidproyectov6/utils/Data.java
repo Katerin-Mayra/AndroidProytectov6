@@ -8,6 +8,7 @@ public class Data {
     public static String UPLOAD_RESTORANT = HOST + "/uploadrestaurant";
     public static  String  REGISTER_MENUS = HOST + "/menus";
     public static  String  REGISTER_ORDEN = HOST + "/orden";
+    public static  String  REGISTER_ORDEN_menu = HOST + "/ordenm";
     public static  String  REGISTER_CLIENTE = HOST + "/cliente";
     public static  String  REGISTER_LOGIN = HOST + "/login";
     public static  String  REGISTER_delete = HOST + "/cliente";

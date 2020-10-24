@@ -7,17 +7,30 @@
     android:background="@drawable/telon_de_teatro_cortina_ciego_cubierta_protectora_antecedentes__1_"
     tools:context=".EditarPedido">
 
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad :"
+        android:textColor="#F3EFEF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598" />
+
     <ImageView
         android:id="@+id/fotoperfil3"
-        android:layout_width="91dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="36dp"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.393"
+        app:layout_constraintVertical_bias="0.295"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ImageButton
@@ -53,10 +66,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386" />
+        app:layout_constraintVertical_bias="0.561" />
 
     <EditText
         android:id="@+id/cantidadEP"
@@ -65,7 +78,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="344dp"
+        android:layout_marginBottom="268dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Cantidad"
@@ -79,7 +92,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/luegar_envioEP2" />
 
@@ -88,13 +101,13 @@
         android:layout_width="269dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="192dp"
+        android:layout_marginBottom="140dp"
         android:background="@drawable/rectangle"
+        android:backgroundTint="#FAE6E6"
         android:text="Guardar Pedido"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.753"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MapView1"
         app:layout_constraintVertical_bias="0.731"
@@ -113,5 +126,19 @@
         app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lugar de Envio :"
+        android:textColor="#F3EFEF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.488" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

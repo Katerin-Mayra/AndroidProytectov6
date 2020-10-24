@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.katerin.androidproyectov6.InfoPedidos;
 import com.example.katerin.androidproyectov6.R;
+import com.example.katerin.androidproyectov6.Registrar_Factura;
 import com.example.katerin.androidproyectov6.adapter4P.PedAdapter;
 import com.example.katerin.androidproyectov6.adapter5PA.EsPedidoA;
 
@@ -64,11 +65,23 @@ public class PedMeAdapterA extends BaseAdapter {
             final TextView precios = convertView.findViewById (R.id.preciosVP);
             precios.setText(LISTPEDIDOSAP.get(position).getPrecios());
 
+            final TextView estado = convertView.findViewById (R.id.idestadoad);
+            estado.setText(LISTPEDIDOSAP.get(position).getEstado());
+
+            final TextView cliente = convertView.findViewById (R.id.idclientep);
+            cliente.setText(LISTPEDIDOSAP.get(position).getCliente());
+
+            final TextView correo = convertView.findViewById (R.id.correofac);
+            correo.setText(LISTPEDIDOSAP.get(position).getCorreo());
+
+            final TextView correoC = convertView.findViewById (R.id.correoC);
+            correoC.setText(LISTPEDIDOSAP.get(position).getCorreoC());
 
             final String id;
 
             //Button eliminar = convertView.findViewById(R.id.eliminarVP);
             Button info = convertView.findViewById(R.id.infoVPA);
+            Button factura = convertView.findViewById(R.id.clientebut);
             id = this.LISTPEDIDOSAP.get(position).getId();
 
             info.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +100,27 @@ public class PedMeAdapterA extends BaseAdapter {
                 listem.EdRest(EDRESTAURANTE);*/
 
                 }
+            });
+
+            factura.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, Registrar_Factura.class);
+
+                    intent.putExtra("lugar_envio",lugar_envio.getText());
+                    intent.putExtra("precios",precios.getText());
+                    intent.putExtra("cantidad",cantidad.getText());
+                    intent.putExtra("pago_total",pago_total.getText());
+                    intent.putExtra("cliente",cliente.getText());
+                    intent.putExtra("correo",correo.getText());
+                    intent.putExtra("correoC",correoC.getText());
+                    intent.putExtra("id",id);
+                    context.startActivity(intent);
+/*
+                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
+                listem.EdRest(EDRESTAURANTE);*/
+
+               }
             });
         }
 

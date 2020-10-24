@@ -14,10 +14,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/sazonador_de_vegetales_moda_verano_olla_caliente">
+            android:background="@drawable/cubiertos_en_la_mesa">
 
             <ImageView
-                android:id="@+id/imagenVMA"
+                android:id="@+id/imagenVMC"
                 android:layout_width="97dp"
                 android:layout_height="84dp"
                 android:layout_marginStart="16dp"
@@ -27,25 +27,27 @@
                 app:srcCompat="@android:drawable/stat_sys_headset" />
 
             <TextView
-                android:id="@+id/nombreVMA"
-                android:layout_width="290dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-smallcaps"
+                android:id="@+id/nombreVMC"
+                android:layout_width="291dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/abril_fatface"
                 android:hint="nombre 1"
                 android:textAlignment="center"
-                android:textColor="#B62B2B"
-                android:textSize="22sp"
+                android:textColor="#750404"
+                android:textSize="24sp"
                 android:textStyle="normal|bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.098"
                 app:layout_constraintStart_toEndOf="@+id/imagenVM"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.07" />
 
             <TextView
-                android:id="@+id/precioVMA"
-                android:layout_width="104dp"
-                android:layout_height="23dp"
+                android:id="@+id/precioVMC"
+                android:layout_width="85dp"
+                android:layout_height="22dp"
                 android:fontFamily="@font/abril_fatface"
                 android:hint="nobre 2"
                 android:textAlignment="center"
@@ -54,54 +56,39 @@
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.397"
+                app:layout_constraintHorizontal_bias="0.38"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.504" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/descripcionVMA"
-                android:layout_width="176dp"
-                android:layout_height="24dp"
+                android:id="@+id/descripcionVMC"
+                android:layout_width="182dp"
+                android:layout_height="22dp"
                 android:hint="direccion"
                 android:textAlignment="center"
                 android:textColor="#FFFEFE"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.961"
+                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/editarVMA"
+                android:id="@+id/infoVMC"
                 android:layout_width="109dp"
                 android:layout_height="35dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/rectangle"
-                android:backgroundTint="#D6F3CB"
-                android:text="EDITAR"
+                android:backgroundTint="#F87676"
+                android:text="INFO MENU"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.43"
+                app:layout_constraintHorizontal_bias="0.589"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.863" />
-
-            <Button
-                android:id="@+id/eliminarVMA"
-                android:layout_width="109dp"
-                android:layout_height="35dp"
-                android:layout_marginEnd="36dp"
-                android:background="@drawable/rectangle"
-                android:backgroundTint="#DAD4F6"
-                android:text="ELIMINAR"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/editarVMC"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.867" />
+                app:layout_constraintVertical_bias="0.831" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

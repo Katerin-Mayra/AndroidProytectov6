@@ -25,15 +25,17 @@
         android:layout_height="32dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:text="Ver Restaurantes Cliente"
+        android:fontFamily="@font/abril_fatface"
 
+        android:text="VER RESTAURANTES"
+        android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/colorAccent3"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/lisrestaurantcliente2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -60,7 +62,7 @@
         android:layout_below="@+id/atrasVR"
 
         android:layout_marginTop="20dp"
-        android:background="@color/colorAccent3"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
         android:cacheColorHint="@color/colorAccent3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/atrasVR"
@@ -74,12 +76,13 @@
         android:layout_height="33dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/rectangle"
+        android:paddingStart="15dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/lisrestaurantcliente2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
+        app:layout_constraintVertical_bias="0.734" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

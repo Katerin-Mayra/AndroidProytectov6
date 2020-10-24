@@ -25,14 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="16dp"
-        android:text="Restaurantes"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/abril_fatface"
 
+        android:text="Restaurantes"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/colorAccent3"
         android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,15 +55,16 @@
 
         android:id="@+id/lisrestaurant2"
         android:layout_width="match_parent"
-        android:layout_height="630dp"
+        android:layout_height="620dp"
         android:layout_below="@+id/atrasVR"
 
-        android:layout_marginTop="20dp"
-        android:background="@color/colorAccent3"
+        android:layout_marginTop="18dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
         android:cacheColorHint="@color/colorAccent3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/atrasVR"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints,ObsoleteLayoutParam"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

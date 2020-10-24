@@ -98,6 +98,12 @@ public class Ver_Pedido extends AppCompatActivity implements onLoadData {
                 }else{
                     item.setNombre("");
                 }
+                if(data.getJSONObject(i).has("estado")){
+                    item.setEstado(data.getJSONObject(i).getString("estado"));
+                }else{
+                    item.setEstado("");
+                }
+
 
                 item.setId(data.getJSONObject(i).getString("_id"));
 

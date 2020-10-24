@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/spice_seasoning_h5_background"
+    android:background="@drawable/telon_de_teatro_cortina_ciego_cubierta_protectora_antecedentes"
     tools:context=".Cliente1">
 
     <TextView
         android:id="@+id/idC"
-        android:layout_width="201dp"
+        android:layout_width="250dp"
         android:layout_height="3dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
@@ -38,39 +38,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/ci2"
-        android:layout_width="210dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/rectangle"
-        android:paddingStart="10dp"
-        android:text="CI"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.963"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre2" />
-
-    <TextView
-        android:id="@+id/telefono2"
-        android:layout_width="210dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/rectangle"
-        android:paddingStart="10dp"
-        android:text="Telefono"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.963"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ci2" />
-
-    <TextView
         android:id="@+id/nombre2"
-        android:layout_width="210dp"
+        android:layout_width="250dp"
         android:layout_height="34dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
         android:text="Nombre"
@@ -80,68 +52,80 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/tipo"
-        android:layout_width="210dp"
+        android:id="@+id/ci2"
+        android:layout_width="250dp"
         android:layout_height="34dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
-        android:text="Tipo"
+        android:text="CI"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintHorizontal_bias="0.968"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correo2" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre2" />
+
+    <TextView
+        android:id="@+id/telefono2"
+        android:layout_width="250dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle"
+        android:paddingStart="10dp"
+        android:text="Telefono"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ci2" />
 
     <TextView
         android:id="@+id/correo2"
-        android:layout_width="210dp"
+        android:layout_width="250dp"
         android:layout_height="34dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
         android:text="Correo"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.968"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/telefono2" />
+
+    <TextView
+        android:id="@+id/tipo"
+        android:layout_width="250dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle"
+        android:paddingStart="10dp"
+        android:text="Tipo"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correo2" />
 
     <ImageView
         android:id="@+id/fotoperfil"
         android:layout_width="127dp"
         android:layout_height="132dp"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="252dp"
+        android:layout_marginTop="160dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <Button
-        android:id="@+id/vercarrito"
-        android:layout_width="153dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/rectangle"
-        android:padding="10dp"
-        android:paddingStart="10dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="Ver carrito"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fotoperfil" />
-
-    <Button
         android:id="@+id/reapedido"
-        android:layout_width="151dp"
-        android:layout_height="51dp"
+        android:layout_width="157dp"
+        android:layout_height="54dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="76dp"
         android:background="@drawable/rectangle"
+        android:backgroundTint="#F1D2D2"
+        android:fontFamily="@font/aclonica"
         android:padding="10dp"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
@@ -150,41 +134,22 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:text="Realizar pedido"
-        app:layout_constraintEnd_toStartOf="@+id/vercarrito"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tipo" />
-
-    <Button
-        android:id="@+id/edicuenta"
-        android:layout_width="148dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/rectangle"
-        android:padding="10dp"
-        android:paddingStart="10dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="Editar cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/elicuenta"
+        app:layout_constraintEnd_toStartOf="@+id/vercarrito"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reapedido"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623" />
 
     <Button
         android:id="@+id/elicuenta"
-        android:layout_width="145dp"
-        android:layout_height="49dp"
+        android:layout_width="172dp"
+        android:layout_height="56dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="56dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/rectangle"
+        android:backgroundTint="#F6D0E5"
+        android:fontFamily="@font/aclonica"
         android:padding="10dp"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
@@ -195,18 +160,70 @@
         android:text="Eliminar cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vercarrito"
-        app:layout_constraintVertical_bias="0.205" />
+        app:layout_constraintVertical_bias="0.195" />
+
+    <Button
+        android:id="@+id/edicuenta"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="#E2F8DA"
+        android:fontFamily="@font/aclonica"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Editar cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/elicuenta"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reapedido"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <Button
+        android:id="@+id/vercarrito"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="#E0DDED"
+        android:fontFamily="@font/aclonica"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Ver carrito"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="104dp"
+        android:fontFamily="@font/abril_fatface"
         android:text="VER CLIENTE"
+        android:textAlignment="center"
         android:textColor="@color/colorAccent3"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

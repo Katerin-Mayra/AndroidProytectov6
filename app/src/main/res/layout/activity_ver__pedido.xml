@@ -25,14 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="96dp"
         android:layout_marginTop="16dp"
-        android:text="Ver Pedidos"
+        android:fontFamily="@font/abril_fatface"
 
+        android:text="Ver Pedidos"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/colorAccent3"
         android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,7 +60,7 @@
 
         android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp"
-        android:background="@color/colorAccent3"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
         android:cacheColorHint="@color/colorAccent3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/atrasVR"

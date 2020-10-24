@@ -100,7 +100,7 @@ public class Registrar_Usuario extends AppCompatActivity {
         TextView email  = findViewById(R.id.correo1);
         TextView password  = findViewById(R.id.password1);
         Spinner tipo = findViewById(R.id.tipo);
-        if(nombre.length()>15){
+        if(nombre.length()>35){
 
             return;
         }

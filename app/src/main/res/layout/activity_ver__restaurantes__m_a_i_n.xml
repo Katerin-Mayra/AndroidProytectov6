@@ -4,38 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/telon_de_teatro_cortina_ciego_cubierta_protectora_antecedentes"
-    tools:context=".Ver_Restaurante_Pedidos_Admi">
+    android:background="@drawable/telon_de_teatro_cortina_ciego_cubierta_protectora_antecedentes__1_"
+    tools:context=".Ver_Restaurantes_MAIN">
 
     <ImageView
         android:id="@+id/fotoperfil5"
-        android:layout_width="57dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="63dp"
+        android:layout_height="71dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/text"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.016"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="235dp"
+        android:layout_height="44dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/abril_fatface"
-        android:text="Restaurantes Pedidos"
+
+        android:text="RESTAURANTES"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/colorAccent3"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lisrestaurantcliente2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/atrasVR"
@@ -53,32 +55,18 @@
 
     <ListView
 
-        android:id="@+id/lisrestaurantPAD2"
+        android:id="@+id/lisrestaurantcliente2A"
         android:layout_width="match_parent"
-        android:layout_height="628dp"
+        android:layout_height="624dp"
         android:layout_below="@+id/atrasVR"
 
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:background="@android:drawable/editbox_dropdown_light_frame"
         android:cacheColorHint="@color/colorAccent3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/atrasVR"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints,ObsoleteLayoutParam"
         tools:layout_editor_absoluteX="16dp" />
-
-    <TextView
-        android:id="@+id/idADresP"
-        android:layout_width="246dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/rectangle"
-        android:paddingStart="15dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/lisrestaurantPAD2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

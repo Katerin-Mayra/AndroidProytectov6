@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/telon_de_teatro_cortina_ciego_cubierta_protectora_antecedentes"
-    tools:context=".Ver_Restaurante_Pedidos_Admi">
+    android:background="@drawable/food_h5_background"
+    tools:context=".Ver_Menus_MAIN">
 
     <ImageView
         android:id="@+id/fotoperfil5"
-        android:layout_width="57dp"
-        android:layout_height="52dp"
+        android:layout_width="56dp"
+        android:layout_height="62dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,19 +26,19 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-
         android:fontFamily="@font/abril_fatface"
-        android:text="Restaurantes Pedidos"
+
+        android:text="VER MENUS"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/colorAccent3"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/atrasVR"
+        android:id="@+id/atrasVMC1"
         android:layout_width="65dp"
         android:layout_height="66dp"
         android:layout_alignParentTop="true"
@@ -53,32 +53,32 @@
 
     <ListView
 
-        android:id="@+id/lisrestaurantPAD2"
+        android:id="@+id/listamenuClienVM"
         android:layout_width="match_parent"
-        android:layout_height="628dp"
+        android:layout_height="632dp"
         android:layout_below="@+id/atrasVR"
 
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
         android:background="@android:drawable/editbox_dropdown_light_frame"
         android:cacheColorHint="@color/colorAccent3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/atrasVR"
         tools:ignore="MissingConstraints,ObsoleteLayoutParam"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="3dp" />
 
     <TextView
-        android:id="@+id/idADresP"
-        android:layout_width="246dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="52dp"
+        android:id="@+id/idrestauVMC"
+        android:layout_width="248dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/rectangle"
+        android:hint="id"
         android:paddingStart="15dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/lisrestaurantPAD2"
+        app:layout_constraintBottom_toTopOf="@+id/listamenuClienVM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

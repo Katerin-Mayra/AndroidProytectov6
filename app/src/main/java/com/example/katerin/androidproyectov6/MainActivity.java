@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadcomponents() {
         Ver_Restaurante=this.findViewById(R.id.restaurantes);
-        mapa=this.findViewById(R.id.mapa);
+       // mapa=this.findViewById(R.id.mapa);
 
      //   registrarse = findViewById(R.id.register2);
       //  login=this.findViewById(R.id.login);
@@ -132,19 +132,19 @@ public class MainActivity extends AppCompatActivity {
         Ver_Restaurante.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Ver_RestauranteActivity =new Intent(root,Ver_Restaurante_Cliente.class);
+                Intent Ver_RestauranteActivity =new Intent(root,Ver_Restaurantes_MAIN.class);
                 root.startActivity(Ver_RestauranteActivity);
 
             }
-        }));
+        }));/*
         mapa.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent pmapa =new Intent(root,pmapa.class);
+                Intent pmapa =new Intent(root,pruebaemail.class);
                 root.startActivity(pmapa);
 
             }
-        }));
+        }));*/
 
        /* registrarse.setOnClickListener(new View.OnClickListener() {
 

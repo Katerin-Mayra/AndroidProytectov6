@@ -10,15 +10,15 @@
 
     <ImageView
         android:id="@+id/fotoperfil3"
-        android:layout_width="91dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="36dp"
+        android:layout_width="98dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nit"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282"
+        app:layout_constraintVertical_bias="0.313"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ImageButton
@@ -38,7 +38,7 @@
 
     <EditText
         android:id="@+id/namerestorantED"
-        android:layout_width="248dp"
+        android:layout_width="268dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="144dp"
@@ -63,7 +63,7 @@
 
     <EditText
         android:id="@+id/phonerestorantED"
-        android:layout_width="248dp"
+        android:layout_width="268dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -87,7 +87,7 @@
 
     <EditText
         android:id="@+id/streetrestorantED"
-        android:layout_width="248dp"
+        android:layout_width="268dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
@@ -128,13 +128,13 @@
         android:id="@+id/guardarestorantED"
         android:layout_width="269dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="208dp"
         android:background="@drawable/rectangle"
+        android:backgroundTint="#F6DBC2"
         android:text="Guardar Restaurant"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.669"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MapView1"
         app:layout_constraintVertical_bias="0.731"

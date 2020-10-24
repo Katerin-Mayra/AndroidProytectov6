@@ -18,17 +18,19 @@
 
             <TextView
                 android:id="@+id/nombrePro"
-                android:layout_width="187dp"
-                android:layout_height="23dp"
+                android:layout_width="185dp"
+                android:layout_height="30dp"
                 android:text="producto"
                 android:textAlignment="center"
                 android:textColor="#EFCD22"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:textStyle="normal|bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.558"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.121" />
+                app:layout_constraintVertical_bias="0.065" />
 
             <ImageView
                 android:id="@+id/imagenVP"
@@ -46,7 +48,6 @@
                 android:layout_width="91dp"
                 android:layout_height="25dp"
                 android:layout_marginTop="36dp"
-                android:layout_marginEnd="120dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:hint="nombre 1"
                 android:textAlignment="center"
@@ -55,8 +56,8 @@
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintBottom_toTopOf="@+id/descripcionVP"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.098"
-                app:layout_constraintStart_toEndOf="@+id/imagenVM"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
@@ -64,8 +65,8 @@
                 android:id="@+id/cantidadVP"
                 android:layout_width="66dp"
                 android:layout_height="28dp"
-                android:layout_marginEnd="48dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="244dp"
+                android:layout_marginBottom="40dp"
                 android:fontFamily="@font/abril_fatface"
                 android:hint="nobre 2"
                 android:textAlignment="center"
@@ -77,41 +78,43 @@
 
             <TextView
                 android:id="@+id/lugar_envioVP"
-                android:layout_width="150dp"
-                android:layout_height="26dp"
+                android:layout_width="135dp"
+                android:layout_height="25dp"
                 android:layout_marginStart="16dp"
                 android:hint="direccion"
                 android:textAlignment="center"
                 android:textColor="#FFFEFE"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/precioVP"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imagenVP"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.673" />
+                app:layout_constraintVertical_bias="0.933" />
 
             <Button
                 android:id="@+id/editarVPC"
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="25dp"
                 android:background="@drawable/rectangle"
+                android:backgroundTint="#E3F6DC"
                 android:text="Editar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/eliminarVP"
-                app:layout_constraintHorizontal_bias="0.715"
+                app:layout_constraintHorizontal_bias="0.964"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.95" />
+                app:layout_constraintVertical_bias="0.961" />
 
             <Button
                 android:id="@+id/eliminarVP"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
-                android:layout_marginEnd="28dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
                 android:background="@drawable/rectangle"
+                android:backgroundTint="#D3B4F8"
                 android:text="ELIMINAR"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -120,18 +123,20 @@
 
             <TextView
                 android:id="@+id/preciosVP"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_width="74dp"
+                android:layout_height="25dp"
                 android:layout_marginEnd="16dp"
-                android:text="TextView"
+                android:text="preci"
+                android:textAlignment="center"
                 android:textColor="#FDF7F7"
+                android:textSize="20sp"
+                android:textStyle="normal|bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/editarVP"
-                app:layout_constraintHorizontal_bias="0.403"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.881"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.927" />
+                app:layout_constraintVertical_bias="0.619" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -139,9 +144,10 @@
                 android:layout_height="wrap_content"
                 android:text="Pago Total : "
                 android:textColor="#F6F6F6"
+                android:textStyle="normal|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintHorizontal_bias="0.346"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.378" />
@@ -152,12 +158,13 @@
                 android:layout_height="wrap_content"
                 android:text="Cantidad :"
                 android:textColor="#F8F5F5"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.675"
+                app:layout_constraintHorizontal_bias="0.08"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.693" />
+                app:layout_constraintVertical_bias="0.63" />
 
             <TextView
                 android:id="@+id/textView21"
@@ -170,7 +177,38 @@
                 app:layout_constraintHorizontal_bias="0.02"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.909" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio Producto :"
+                android:textColor="#FFFCFC"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.574"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.639" />
+
+            <TextView
+                android:id="@+id/idestadoVP"
+                android:layout_width="86dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="2dp"
+                android:background="#389B9F"
+                android:text="Estado"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal|bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.988"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.059" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

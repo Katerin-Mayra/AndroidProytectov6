@@ -85,6 +85,9 @@ public class PedAdapter extends BaseAdapter {
             final TextView nombre = convertView.findViewById (R.id.nombrePro);
             nombre.setText(LISTPEDIDOS.get(position).getNombre());
 
+            final TextView estado = convertView.findViewById (R.id.idestadoVP);
+            estado.setText(LISTPEDIDOS.get(position).getEstado());
+
 
 
 

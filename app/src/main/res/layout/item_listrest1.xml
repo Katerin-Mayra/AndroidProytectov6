@@ -23,6 +23,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/rectangle"
+                android:backgroundTint="#CDB2ED"
                 android:text="Menus"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/editarVM" />
@@ -92,6 +93,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/rectangle"
+                android:backgroundTint="#C1F6AC"
                 android:text="Editar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/eliminarVM" />
@@ -103,6 +105,7 @@
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/rectangle"
+                android:backgroundTint="#F8C9B0"
                 android:text="ELIMINAR"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

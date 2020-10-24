@@ -9,15 +9,15 @@
 
     <ImageView
         android:id="@+id/fotoperfil3"
-        android:layout_width="91dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="36dp"
+        android:layout_width="110dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nit"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
+        app:layout_constraintVertical_bias="0.313"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ImageButton
@@ -62,7 +62,7 @@
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Precio"
@@ -85,7 +85,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Detalle"
@@ -98,20 +98,20 @@
         android:paddingRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/MapView1ED"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="0.913"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phonerestorant" />
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/MapView1ED"
-        android:layout_width="match_parent"
-        android:layout_height="147dp"
+        android:layout_width="296dp"
+        android:layout_height="94dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="64dp"
         app:layout_constraintBottom_toTopOf="@+id/guardarmenuED"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -120,14 +120,14 @@
         android:layout_width="269dp"
         android:layout_height="45dp"
         android:background="@drawable/rectangle"
+        android:backgroundTint="#F6D4D4"
         android:text="Guardar Menu"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839"
+        app:layout_constraintVertical_bias="0.801"
         tools:ignore="MissingConstraints" />
 
     <TextView
