@@ -132,6 +132,7 @@ public class VResAdapter1 extends BaseAdapter {
                     intent.putExtra("telefono",telefono.getText());
                     intent.putExtra("calle",calle.getText());
                     intent.putExtra("propietario",propietario.getText());
+
                     intent.putExtra("id",id);
                     context.startActivity(intent);
 /*

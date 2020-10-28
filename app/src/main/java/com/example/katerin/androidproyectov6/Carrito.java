@@ -34,6 +34,8 @@ public class Carrito extends AppCompatActivity {
             }
         });
         StaticData.LISTAPARCIAL.clear();
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
     @Override
     protected void onResume() {

@@ -39,6 +39,9 @@ public class Editar_Menu1 extends AppCompatActivity {
                 sedData();
             }
         });
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
     public void informacion() {
         Bundle intent = getIntent().getExtras();

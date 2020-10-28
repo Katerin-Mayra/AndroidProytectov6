@@ -4,56 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/telon_de_teatro_cortina_ciego_cubierta_protectora_antecedentes__1_"
     tools:context=".FotoRestaurante">
+
+    <View
+        android:id="@+id/view18"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgrestaurant"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_width="365dp"
+        android:layout_height="346dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="3dp"
         android:background="@color/colorAccent3"
         android:paddingLeft="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
     <Button
         android:id="@+id/registrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="215dp"
+        android:layout_height="74dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/rectangle"
+        android:backgroundTint="#C13535"
+        android:fontFamily="@font/abril_fatface"
         android:onClick="tomarFoto"
         android:paddingLeft="14dp"
         android:paddingTop="1dp"
         android:paddingRight="20dp"
         android:text="Registrar"
-        android:textColor="#0E1637"
+        android:textColor="#F7F8FA"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tomarfoto"
-        app:layout_constraintVertical_bias="0.234" />
+        app:layout_constraintVertical_bias="0.464" />
 
     <ImageButton
         android:id="@+id/tomarfoto"
         android:layout_width="92dp"
         android:layout_height="51dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
         android:onClick="tomarFoto"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgrestaurant"
         app:srcCompat="@drawable/ic_menu_camera" />
+
+    <TextView
+        android:id="@+id/idclienteCtres"
+        android:layout_width="272dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/rectangle"
+        android:hint="id"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

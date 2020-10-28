@@ -35,6 +35,7 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
+
        atraslogin = findViewById(R.id.atraslogin);
 
         atraslogin.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +59,8 @@ public class login extends AppCompatActivity {
         });
 
 
+
+
        btn_login = findViewById (R.id.login);
 
        /* registrarse = findViewById(R.id.registrarse);
@@ -70,6 +73,8 @@ public class login extends AppCompatActivity {
             }
 
         });*/
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
 
        btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +85,7 @@ public class login extends AppCompatActivity {
             }
 
         });
+
     }
 
     private void sendData() {

@@ -39,6 +39,9 @@ public class VerMenu extends AppCompatActivity {
         });
         loadComponents();
 
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
+
     }
 
     private void loadComponents() {

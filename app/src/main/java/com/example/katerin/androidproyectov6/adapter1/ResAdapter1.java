@@ -29,7 +29,7 @@ public class ResAdapter1 extends BaseAdapter {
      public ArrayList<EsRestaurante> LISTRESTAURANT;
      public Context context;
      editarRest listem;
-
+     String img12;
      public interface editarRest{
          void EdRest (String data);
 
@@ -74,16 +74,21 @@ public class ResAdapter1 extends BaseAdapter {
             telefono.setText(LISTRESTAURANT.get(position).getTelefono());
 
             ImageView image = convertView.findViewById (R.id.imagenVM);
+            img12=LISTRESTAURANT.get(position).getImagen();
+
             if(LISTRESTAURANT.get(position).getImagen().equals("No IMAGE")){
                 Glide.with(context)
                         .load("https://image.freepik.com/vector-gratis/plantilla-fondo-menu-restaurante_23-2147490036.jpg")
                         .centerCrop()
                         .into(image);
             }else{
-                Glide.with(context)
+
+               /* Glide.with(context)
                         .load(LISTRESTAURANT.get(position).getImagen())
                         .centerCrop()
-                        .into(image);
+                        .into(image)*/
+
+                verimagen(img12);
             }
 
             final String id;
@@ -120,7 +125,7 @@ public class ResAdapter1 extends BaseAdapter {
                     AlertDialog dialog = builder.create();*/
                     //dialog.show();
                     Toast.makeText(context, "eliminado el restaurante id ="+id, Toast.LENGTH_LONG).show();
-                    deleteMenu(id);
+                  //  deleteMenu(id);
 
 
                 }
@@ -169,13 +174,46 @@ public class ResAdapter1 extends BaseAdapter {
 
 
     }
-
+/*
     private void deleteMenu(final String id) {
 
 
         AsyncHttpClient client = new AsyncHttpClient();
 
         client.delete("http://192.168.100.180:8000/api/1.0/restaurante" + "?id=" + id, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+                    String message = response.getString("msn");
+                    if (message != null) {
+
+                        Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+
+                        // loadComponents();
+                                /*BorrarMenuAdapter adapter = new BorrarMenuAdapter(view);
+      /*                                  adapter.notifyDataSetChanged();9*/
+
+
+    /*                } else {
+                        Toast.makeText(context, "Error al borrar", Toast.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+
+
+        });
+    }
+*/
+    private void verimagen(final String img12) {
+
+
+        AsyncHttpClient client = new AsyncHttpClient();
+
+        client.get("http://192.168.100.180:8000/api/1.0/listarIMG" + "?id=" + img12, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
@@ -205,3 +243,9 @@ public class ResAdapter1 extends BaseAdapter {
 
 
 }
+
+
+
+
+
+

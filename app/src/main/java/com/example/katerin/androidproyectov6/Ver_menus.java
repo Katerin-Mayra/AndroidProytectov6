@@ -35,6 +35,9 @@ public class Ver_menus extends AppCompatActivity implements onLoadData {
         listares = findViewById(R.id.listamenuVM);
         MenuApi api= new MenuApi(this);
         api.loadMenu();
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     @Override

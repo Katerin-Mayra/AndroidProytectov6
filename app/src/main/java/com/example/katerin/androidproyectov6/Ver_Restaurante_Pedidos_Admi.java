@@ -44,6 +44,9 @@ public class Ver_Restaurante_Pedidos_Admi extends AppCompatActivity implements o
         ResApi api= new ResApi(this);
         //api.loadRes();
         api.loadRes(id);
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     @Override

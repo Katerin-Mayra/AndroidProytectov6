@@ -52,6 +52,9 @@ public class Registrar_Usuario extends AppCompatActivity {
             }
 
         });
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
     public void Registrar(){
         String name1 = name.getText().toString();

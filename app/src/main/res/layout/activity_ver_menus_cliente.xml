@@ -55,30 +55,30 @@
 
         android:id="@+id/listamenuClienVM"
         android:layout_width="match_parent"
-        android:layout_height="628dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/atrasVR"
 
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="8dp"
         android:background="@android:drawable/editbox_dropdown_light_frame"
         android:cacheColorHint="@color/colorAccent3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/atrasVR"
+        app:layout_constraintTop_toBottomOf="@+id/idrestauVMC"
+        app:layout_constraintVertical_bias="0.504"
         tools:ignore="MissingConstraints,ObsoleteLayoutParam"
-        tools:layout_editor_absoluteX="3dp" />
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/idrestauVMC"
         android:layout_width="246dp"
         android:layout_height="26dp"
-        android:layout_marginTop="64dp"
         android:background="@drawable/rectangle"
         android:hint="id"
         android:paddingStart="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/listamenuClienVM"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.099" />
 </androidx.constraintlayout.widget.ConstraintLayout>

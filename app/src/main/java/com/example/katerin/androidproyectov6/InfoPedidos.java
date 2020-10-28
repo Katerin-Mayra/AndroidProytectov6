@@ -84,6 +84,9 @@ public class InfoPedidos extends AppCompatActivity {
             }
         });
 
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
+
     }
 
     public void informacion(){

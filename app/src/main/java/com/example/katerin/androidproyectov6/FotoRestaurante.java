@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.katerin.androidproyectov6.utils.BitmapStruct;
@@ -26,6 +27,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -42,10 +44,17 @@ public class FotoRestaurante extends AppCompatActivity {
     private ImageButton btn;
     private Button SEND;
     private BitmapStruct DATAIMAGE;
+    String idCC;
+    public  TextView _idC;
+  //  TextView _idC;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foto_restaurante);
+
+        _idC=(TextView) findViewById(R.id.idclienteCtres);
+        _idC.setText( getIntent().getExtras().getString("_id"));
+
         btn = findViewById(R.id.tomarfoto);
 
         SEND = findViewById(R.id.registrar);
@@ -63,21 +72,53 @@ public class FotoRestaurante extends AppCompatActivity {
                     AsyncHttpClient client = new AsyncHttpClient();
                     File img = new File(DATAIMAGE.path);
 
-                    client.addHeader("authorization", Data.TOKEN);
+                   // client.addHeader("authorization", Data.TOKEN);
                     RequestParams params = new RequestParams();
                     try {
-                        params.put("img", img);
+                        params.put("file", img);
 
-                        client.post(Data.UPLOAD_RESTORANT, params, new JsonHttpResponseHandler(){
+                        client.post(Data.REGISTER_IMG, params, new JsonHttpResponseHandler(){
                             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                                 Toast.makeText(FotoRestaurante.this, "EXITO", Toast.LENGTH_LONG).show();
+
                                 //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONObject) was not overriden, but callback was received");
+                                try {
+
+                                    int resp = response.getInt("resp");
+                                    Toast.makeText(FotoRestaurante.this, "respuesta:"+resp, Toast.LENGTH_SHORT).show();
+                                    if(resp==200){
+                                        JSONObject json=response.getJSONObject("updateimg");
+
+                                        //String token = response.getString("token");
+
+                                        String idI=json.getString("_id");
+
+                                        //Data.TOKEN="Data "+token;
+                                        Data.ID_User=idI;
+
+                                            Intent intent =new Intent(FotoRestaurante.this, Registrar_Restaurant.class);
+                                            intent.putExtra("_idI",idI);
+                                            startActivity(intent);
+                                            finish();
+
+
+                                        //Toast.makeText(login.this, "Login correctamente: "+ token, Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(FotoRestaurante.this, "registro correctamente: ", Toast.LENGTH_SHORT).show();
+                                    }else{
+                                        Toast.makeText(FotoRestaurante.this, "error de envio", Toast.LENGTH_SHORT).show();
+                                    }
+                                } catch (JSONException e) {
+                                    Toast.makeText(FotoRestaurante.this,e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    e.printStackTrace();
+                                }
                             }
+
                         });
 
                     } catch(FileNotFoundException e) {}
                 }
-                startActivity(new Intent(FotoRestaurante.this,Info_Restaurante.class));
+              //  startActivity(new Intent(FotoRestaurante.this,Info_Restaurante.class));
+             //  startActivity(new Intent(FotoRestaurante.this,Info_Restaurante.class));
             }
         });
 

@@ -62,6 +62,9 @@ String _id;
 
             }
         });
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     public void sedData() {

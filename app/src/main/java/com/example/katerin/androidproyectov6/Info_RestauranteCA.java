@@ -3,14 +3,17 @@ package com.example.katerin.androidproyectov6;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.net.URI;
+
 public class Info_RestauranteCA extends AppCompatActivity {
-    Button crear,ver,edit,delete;
+    Button crear,ver,edit,llamarR;
     ImageButton atrasIRC2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +22,8 @@ public class Info_RestauranteCA extends AppCompatActivity {
         crear = findViewById(R.id.crearmenuIR);
         ver = findViewById(R.id.vermenuIR);
         edit = findViewById(R.id.editarmenuIR);
-        delete = findViewById(R.id.elimenuIR);
+
+        llamarR = findViewById(R.id.llamarR);
 
 
         atrasIRC2 = findViewById(R.id.atrasIRC2);
@@ -44,14 +48,16 @@ public class Info_RestauranteCA extends AppCompatActivity {
 
         String _id_de_mi_restaurant=getIntent().getExtras().getString("_id");
 
-       /*
-        crear.setOnClickListener(new View.OnClickListener() {
+
+        llamarR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Info_Restaurante.this,CrearMenu.class));
+                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"+telefono.getText()));
+                startActivity(intent);
 
             }
         });
+        /*
         ver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,5 +78,8 @@ public class Info_RestauranteCA extends AppCompatActivity {
 
             }
         });*/
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 }

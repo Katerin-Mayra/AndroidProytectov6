@@ -56,6 +56,9 @@ public class Ver_menus_cliente extends AppCompatActivity implements onLoadData {
 
         VMenusCliente api= new VMenusCliente(this);
         api.loadMenu(id);
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
 

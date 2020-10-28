@@ -67,6 +67,9 @@ public class CrearMenu extends AppCompatActivity {
 
        // loadComponents();
 
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
+
     }
 
 
@@ -180,4 +183,7 @@ public class CrearMenu extends AppCompatActivity {
         });
 
     }*/
+
+
+
 }

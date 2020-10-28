@@ -59,6 +59,9 @@ public class Ver_Pedido extends AppCompatActivity implements onLoadData {
         id = intent.getString("_id");
         PediCli api = new PediCli(this);
         api.loadPed(id);
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     @Override

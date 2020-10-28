@@ -61,6 +61,9 @@ public class Editar1 extends AppCompatActivity {
 
 
         informacion();
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
     public void informacion(){
         Intent intent = getIntent();

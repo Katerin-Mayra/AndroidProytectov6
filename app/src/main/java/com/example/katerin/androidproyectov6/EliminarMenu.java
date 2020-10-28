@@ -53,6 +53,9 @@ public class EliminarMenu extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
         });
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
     private void loadComponents() {
         AsyncHttpClient client = new AsyncHttpClient ();

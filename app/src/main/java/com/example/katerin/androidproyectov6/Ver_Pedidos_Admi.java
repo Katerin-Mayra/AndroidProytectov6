@@ -45,6 +45,9 @@ public class Ver_Pedidos_Admi extends AppCompatActivity implements onLoadData {
         listares = findViewById(R.id.lisrestaurantAdmi);
         PedApi api= new PedApi(this);
         api.loadPed();
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     @Override

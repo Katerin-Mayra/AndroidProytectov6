@@ -112,7 +112,8 @@ public class Cliente1 extends AppCompatActivity {
 
             }
         });
-
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     private void sedData() {

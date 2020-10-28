@@ -1,6 +1,7 @@
 package com.example.katerin.androidproyectov6;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -21,7 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-    Button login,Ver_Restaurante,mapa;
+    Button login,Ver_Restaurante,mapa,img,img2;
     Button registrarse;
     Button registrar_restaurante;
     Button menus,registrarMenu;
@@ -40,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent =new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.facebook.com/"));
+                startActivity(intent);
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,R.id.nav_login,R.id.nav_registrar_Usuario,R.id.nav_restaurante)
+                R.id.nav_home,R.id.nav_login,R.id.nav_registrar_Usuario,R.id.nav_ver_Restaurantes_MAIN)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -66,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadcomponents() {
         Ver_Restaurante=this.findViewById(R.id.restaurantes);
+        img=this.findViewById(R.id.img);
+        img2=this.findViewById(R.id.img2);
        // mapa=this.findViewById(R.id.mapa);
 
      //   registrarse = findViewById(R.id.register2);
@@ -136,7 +141,28 @@ public class MainActivity extends AppCompatActivity {
                 root.startActivity(Ver_RestauranteActivity);
 
             }
-        }));/*
+        }));
+
+        img.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ver_img =new Intent(root,pruebaimg.class);
+                root.startActivity(ver_img);
+
+            }
+        }));
+
+        img2.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ver_img =new Intent(root,FotoRestaurante.class);
+                root.startActivity(ver_img);
+
+            }
+        }));
+
+
+        /*
         mapa.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {

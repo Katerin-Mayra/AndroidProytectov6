@@ -39,6 +39,9 @@ public class EditarPedido extends AppCompatActivity {
                 sedData();
             }
         });
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     public void informacion() {

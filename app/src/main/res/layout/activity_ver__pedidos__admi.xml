@@ -54,15 +54,15 @@
 
         android:id="@+id/lisrestaurantAdmi"
         android:layout_width="match_parent"
-        android:layout_height="610dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/atrasVR"
 
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/colorAccent3"
         android:cacheColorHint="@color/colorAccent3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/atrasVR"
+        app:layout_constraintTop_toBottomOf="@+id/text"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints,ObsoleteLayoutParam"
         tools:layout_editor_absoluteX="-16dp" />

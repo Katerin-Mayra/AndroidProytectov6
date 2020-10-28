@@ -60,6 +60,9 @@ public class Ver_Restaurante1 extends AppCompatActivity implements onLoadData {
         ResAdapter1 adapter=new ResAdapter1(datos,this.getBaseContext());
        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
         listares.setAdapter(adapter);*/
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     @Override

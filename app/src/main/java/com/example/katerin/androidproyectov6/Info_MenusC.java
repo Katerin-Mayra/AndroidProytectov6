@@ -47,6 +47,9 @@ public class Info_MenusC extends AppCompatActivity {
 */
 
         String _id_de_mi_restaurant=getIntent().getExtras().getString("_id");
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
 }

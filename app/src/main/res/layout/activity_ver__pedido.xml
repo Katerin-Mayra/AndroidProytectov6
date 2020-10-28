@@ -55,18 +55,18 @@
 
         android:id="@+id/lisrestaurant2"
         android:layout_width="match_parent"
-        android:layout_height="610dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/atrasVR"
 
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="4dp"
         android:background="@android:drawable/editbox_dropdown_light_frame"
         android:cacheColorHint="@color/colorAccent3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/atrasVR"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/verPC"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints,ObsoleteLayoutParam"
-        tools:layout_editor_absoluteX="-16dp" />
+        tools:layout_editor_absoluteX="2dp" />
 
     <TextView
         android:id="@+id/verPC"
@@ -75,11 +75,11 @@
         android:background="@drawable/rectangle"
         android:hint="id"
         android:paddingStart="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/lisrestaurant2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.831" />
+        app:layout_constraintVertical_bias="0.116" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

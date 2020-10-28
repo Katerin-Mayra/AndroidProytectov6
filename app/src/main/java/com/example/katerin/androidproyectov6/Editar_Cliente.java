@@ -44,6 +44,9 @@ public class Editar_Cliente extends AppCompatActivity {
                 sedData();
             }
         });
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     public void informacion() {

@@ -60,7 +60,8 @@ public class Ver_Menus_Pedido_Admi extends AppCompatActivity implements onLoadDa
         VMenusCliente api= new VMenusCliente(this);
         api.loadMenu(id);
 
-
+//ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     @Override

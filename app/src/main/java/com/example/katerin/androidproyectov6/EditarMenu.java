@@ -59,6 +59,9 @@ public class EditarMenu extends AppCompatActivity {
 
             }
         });
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
 

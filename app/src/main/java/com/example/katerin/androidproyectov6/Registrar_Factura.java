@@ -93,7 +93,8 @@ public class Registrar_Factura extends AppCompatActivity {
             }
         });
 
-
+//ocultar navegacion kato
+        getSupportActionBar().hide();
 
     }
     private void mandarMail(){

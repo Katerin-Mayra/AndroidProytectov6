@@ -28,6 +28,9 @@ public class pruebaemail extends AppCompatActivity {
             }
         });
 
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
+
     }
     private void mandarMail(){
         Intent email=new Intent(Intent.ACTION_SEND);

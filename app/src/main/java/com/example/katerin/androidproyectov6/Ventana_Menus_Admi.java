@@ -77,7 +77,8 @@ public class Ventana_Menus_Admi extends AppCompatActivity {
 
 
 
-
+//ocultar navegacion kato
+        getSupportActionBar().hide();
 
     }
 

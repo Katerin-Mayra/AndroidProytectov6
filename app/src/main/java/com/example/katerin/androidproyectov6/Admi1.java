@@ -59,6 +59,8 @@ public class Admi1 extends AppCompatActivity {
             }
         });
 
+
+
         elicuenta1 = findViewById(R.id.elicuenta1);
         crearres =  findViewById(R.id.crestaurant);
         veres =  findViewById(R.id.verestaurant);
@@ -161,7 +163,8 @@ public class Admi1 extends AppCompatActivity {
         });
 
 
-
+//ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     private void sedData() {

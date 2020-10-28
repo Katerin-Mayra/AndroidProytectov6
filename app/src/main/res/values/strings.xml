@@ -7,11 +7,11 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">inicio</string>
-    <string name="menu_registro_Usuario">registro</string>
+    <string name="menu_home">INICIO</string>
+    <string name="menu_registro_Usuario">REGISTRO</string>
     <string name="menu_slideshow">sillog</string>
-    <string name="menu_login">Login</string>
-    <string name="menu_restaurante">Restaurante</string>
+    <string name="menu_login">LOGIN</string>
+    <string name="menu_restaurante">RESTAURANTE</string>
 
     <string name="title_activity_ver__restaurante">Ver_Restaurante</string>
     <!-- Strings used for fragments for navigation -->

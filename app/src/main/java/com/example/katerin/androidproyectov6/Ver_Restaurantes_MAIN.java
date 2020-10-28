@@ -35,6 +35,9 @@ public class Ver_Restaurantes_MAIN extends AppCompatActivity implements onLoadDa
 
         listares = findViewById(R.id.lisrestaurantcliente2A);
         VResApi api= new VResApi(this);
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
         api.loadRes();
     }
 

@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:backgroundTint="#2D78EF"
+        app:srcCompat="@drawable/ic_simbolo_de_la_aplicacion_de_facebook" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

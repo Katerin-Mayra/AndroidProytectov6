@@ -36,9 +36,15 @@ public class Registrar_Restaurant extends AppCompatActivity {
     private Geocoder geocoder;
     private TextView street;
     private Button next;
+    private Button imgbutton;
     private LatLng mainposition;
     TextView _id;
+    TextView _idC;
+
+
+    TextView _idI;
     ImageButton atrasRRA;
+    //TextView _idCdos;
     @Override
 
 
@@ -55,6 +61,15 @@ public class Registrar_Restaurant extends AppCompatActivity {
             }
         });
 
+
+        final TextView _idCdos=(TextView) findViewById(R.id.idclientedos);
+        _idCdos.setText( getIntent().getExtras().getString("_id"));
+/*
+        TextView _id=(TextView) findViewById(R.id.idcliente);
+        _id.setText( getIntent().getExtras().getString("_id"));
+*/
+
+
 /*
         map = findViewById(R.id.MapView1);
 
@@ -64,6 +79,26 @@ public class Registrar_Restaurant extends AppCompatActivity {
         map.getMapAsync((OnMapReadyCallback) this);
         geocoder = new Geocoder(getBaseContext(), Locale.getDefault());
 */
+
+        imgbutton = findViewById(R.id.imgbutton);
+        imgbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+/*
+                final TextView _idCdos=(TextView) findViewById(R.id.idclientedos);
+                _idCdos.setText( getIntent().getExtras().getString("_id"));
+*/
+               // startActivity(new Intent(Registrar_Restaurant.this,FotoRestaurante.class));
+                Intent t=new Intent(Registrar_Restaurant.this,FotoRestaurante.class);
+               t.putExtra("_id",_idCdos.getText());
+                // t.putExtra("_id",_id);
+                startActivity(t);
+
+            }
+        });
+
+        _idI=(TextView) findViewById(R.id.imgid);
+        _idI.setText( getIntent().getExtras().getString("_idI"));
         street = findViewById(R.id.streetrestorant);
         next = findViewById(R.id.crear);
         next.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +109,9 @@ public class Registrar_Restaurant extends AppCompatActivity {
                sendData();
             }
         });
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
 
@@ -84,6 +122,7 @@ public class Registrar_Restaurant extends AppCompatActivity {
         TextView street = findViewById(R.id.streetrestorant);
         TextView property = findViewById(R.id.propietario);
         TextView phone = findViewById(R.id.phonerestorant);
+        TextView picture = findViewById(R.id.imgid);
 
         if (name.length() == 0){
             Toast.makeText(this, "Debes ingresar un nombre", Toast.LENGTH_SHORT).show();
@@ -108,7 +147,7 @@ public class Registrar_Restaurant extends AppCompatActivity {
             return;
         }
 
-        if (name.length()!=0 && nit.length()!=0 && street.length()!=0 && phone.length()!=0  && property.length()!=7) {
+        if (name.length()!=0 && nit.length()!=0 && street.length()!=0 && phone.length()!=0  && property.length()!=7 ) {
             Toast.makeText(this, "Se Registro Correctamente", Toast.LENGTH_SHORT).show();
             startActivity (new Intent(Registrar_Restaurant.this, MainActivity.class));
 
@@ -123,6 +162,7 @@ public class Registrar_Restaurant extends AppCompatActivity {
         TextView street = findViewById(R.id.streetrestorant);
         TextView property = findViewById(R.id.propietario);
         TextView phone = findViewById(R.id.phonerestorant);
+        TextView picture = findViewById(R.id.imgid);
 
         TextView _id=(TextView) findViewById(R.id.idcliente);
         _id.setText( getIntent().getExtras().getString("_id"));
@@ -138,12 +178,13 @@ public class Registrar_Restaurant extends AppCompatActivity {
 
         params.add("phone", phone.getText().toString());
         params.add("cliente", _id.getText().toString());
+        params.add("picture", picture.getText().toString());
 
-/*
-            Bundle intent = getIntent().getExtras();
-            _id = intent.getString("_id");
 
-        params.add("cliente", _id);*/
+         /*   Bundle intent = getIntent().getExtras();
+            _id = intent.getString("_id");*/
+
+       // params.add("cliente", _id);
        ///// params.add("lat", String.valueOf(""));
         //params.add("lon", String.valueOf(""));
 
@@ -184,3 +225,7 @@ public class Registrar_Restaurant extends AppCompatActivity {
 
     }
 }
+
+
+
+

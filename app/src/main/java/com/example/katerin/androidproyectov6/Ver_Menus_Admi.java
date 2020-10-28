@@ -62,6 +62,9 @@ public class Ver_Menus_Admi extends AppCompatActivity  implements onLoadData {
         VMenusAdmi api= new VMenusAdmi(this);
        // api.loadMenu(_id.getText().toString());
         api.loadMenu(id);
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     @Override

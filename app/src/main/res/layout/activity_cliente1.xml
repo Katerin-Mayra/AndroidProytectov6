@@ -8,40 +8,41 @@
     tools:context=".Cliente1">
 
     <TextView
-        android:id="@+id/idC"
-        android:layout_width="250dp"
-        android:layout_height="3dp"
-        android:background="@drawable/rectangle"
-        android:paddingStart="10dp"
-        android:text="id"
-        android:textSize="20dp"
+        android:id="@+id/textView43"
+        android:layout_width="314dp"
+        android:layout_height="66dp"
+        android:fontFamily="@font/bungee_shade"
+        android:text="Ver Cliente"
+        android:textAlignment="center"
+        android:textColor="#FBFBFB"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.072" />
 
-    <ImageButton
-        android:id="@+id/atrasVC"
-        android:layout_width="65dp"
-        android:layout_height="66dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/ic_baseline_arrow_back_24"
+    <TextView
+        android:id="@+id/ci2"
+        android:layout_width="250dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rectangle"
+        android:paddingStart="10dp"
+        android:text="CI"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre2" />
 
     <TextView
         android:id="@+id/nombre2"
         android:layout_width="250dp"
         android:layout_height="34dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
@@ -52,52 +53,24 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/ci2"
-        android:layout_width="250dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/rectangle"
-        android:paddingStart="10dp"
-        android:text="CI"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre2" />
-
-    <TextView
         android:id="@+id/telefono2"
         android:layout_width="250dp"
         android:layout_height="34dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
         android:text="Telefono"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ci2" />
-
-    <TextView
-        android:id="@+id/correo2"
-        android:layout_width="250dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/rectangle"
-        android:paddingStart="10dp"
-        android:text="Correo"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefono2" />
 
     <TextView
         android:id="@+id/tipo"
         android:layout_width="250dp"
         android:layout_height="34dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
         android:text="Tipo"
@@ -107,16 +80,82 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/correo2" />
 
+    <TextView
+        android:id="@+id/correo2"
+        android:layout_width="250dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rectangle"
+        android:paddingStart="10dp"
+        android:text="Correo"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefono2" />
+
+    <TextView
+        android:id="@+id/idC"
+        android:layout_width="250dp"
+        android:layout_height="3dp"
+        android:background="@drawable/rectangle"
+        android:paddingStart="10dp"
+        android:text="id"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.156"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/atrasVC"
+        android:layout_width="65dp"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/fotoperfil"
         android:layout_width="127dp"
         android:layout_height="132dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="192dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/vercarrito"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="#E0DDED"
+        android:fontFamily="@font/aclonica"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Ver carrito"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.694" />
 
     <Button
         android:id="@+id/reapedido"
@@ -136,10 +175,10 @@
         android:text="Realizar pedido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/vercarrito"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
+        app:layout_constraintVertical_bias="0.694" />
 
     <Button
         android:id="@+id/elicuenta"
@@ -160,10 +199,10 @@
         android:text="Eliminar cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vercarrito"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.287" />
 
     <Button
         android:id="@+id/edicuenta"
@@ -185,45 +224,18 @@
         android:text="Editar cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/elicuenta"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintHorizontal_bias="0.296"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reapedido"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintVertical_bias="0.283" />
 
-    <Button
-        android:id="@+id/vercarrito"
-        android:layout_width="150dp"
-        android:layout_height="54dp"
-        android:background="@drawable/rectangle"
-        android:backgroundTint="#E0DDED"
-        android:fontFamily="@font/aclonica"
-        android:padding="10dp"
-        android:paddingStart="10dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="Ver carrito"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_wave"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/abril_fatface"
-        android:text="VER CLIENTE"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent3"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

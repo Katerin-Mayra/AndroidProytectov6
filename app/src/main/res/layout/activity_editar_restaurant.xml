@@ -8,6 +8,15 @@
     tools:context=".EditarRestaurant">
 
 
+    <View
+        android:id="@+id/view12"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/fotoperfil3"
         android:layout_width="98dp"
@@ -144,6 +153,7 @@
         android:id="@+id/textView6"
         android:layout_width="248dp"
         android:layout_height="89dp"
+        android:fontFamily="@font/abril_fatface"
         android:text="Editar Restaurante"
         android:textAlignment="center"
         android:textColor="#FDFCFC"
@@ -151,10 +161,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.071" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

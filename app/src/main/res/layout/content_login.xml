@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="320dp"
         android:background="@drawable/ic_baseline_arrow_back_24"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,24 +23,26 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="117dp"
-        android:layout_height="60dp"
+        android:layout_width="139dp"
+        android:layout_height="69dp"
         android:layout_marginTop="88dp"
         android:background="#E14F4F"
+        android:fontFamily="@font/abril_fatface"
         android:text="LOGIN"
-        android:textSize="24sp"
+        android:textColor="#FFFEFE"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordL"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/passwordL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rectangle"
         android:drawableStart="@drawable/ic_baseline_lock_open_24"
@@ -70,20 +72,36 @@
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213" />
+        app:layout_constraintVertical_bias="0.282" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="121dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="159dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/bungee_shade"
+        android:foregroundTint="#F1EAEA"
+        android:shadowColor="#FAF3F3"
         android:text="LOGIN"
         android:textColor="#F8F3F3"
-        android:textSize="30sp"
+        android:textColorHighlight="#FFFDFD"
+        android:textColorHint="#F6F4F4"
+        android:textColorLink="#F6F4F4"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_wave"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

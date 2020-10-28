@@ -58,6 +58,9 @@ public class Info_Restaurante extends AppCompatActivity {
             }
         });
 
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
+
     }
 
 }

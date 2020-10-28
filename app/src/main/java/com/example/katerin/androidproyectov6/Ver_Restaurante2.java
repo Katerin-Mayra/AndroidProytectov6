@@ -28,6 +28,9 @@ public class Ver_Restaurante2 extends AppCompatActivity {
         setContentView(R.layout.activity_ver__restaurante2);
         listares = findViewById(R.id.lisrestaurant2);
         loadComponents();
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     private void loadComponents() {

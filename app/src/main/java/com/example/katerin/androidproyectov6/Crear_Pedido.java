@@ -68,14 +68,17 @@ public class Crear_Pedido extends AppCompatActivity {
                 sedData();
             }
         });
+
+        //ocultar navegacion kato
+        getSupportActionBar().hide();
     }
 
     public void sedData(){
 
-        final EditText nombre1  = findViewById(R.id.nombreCPC);
-        final EditText precio1  = findViewById(R.id.precioCPC);
-        final EditText descripcion1  = findViewById(R.id.descripcionCPC);
-        final EditText idm1  = findViewById(R.id.idmenuP);
+        final TextView nombre1  = findViewById(R.id.nombreCPC);
+        final TextView precio1  = findViewById(R.id.precioCPC);
+        final TextView descripcion1  = findViewById(R.id.descripcionCPC);
+        final TextView idm1  = findViewById(R.id.idmenuP);
 
         final EditText lugar_envio  = findViewById(R.id.lugar_envioCP);
         final EditText cantidad  = findViewById(R.id.cantidadCP);

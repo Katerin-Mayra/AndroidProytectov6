@@ -8,6 +8,15 @@
     android:background="@drawable/device_pick_gold_decoration_background"
     tools:context=".Registrar_Factura">
 
+    <View
+        android:id="@+id/view14"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
@@ -220,6 +229,7 @@
         android:id="@+id/textView4"
         android:layout_width="129dp"
         android:layout_height="43dp"
+        android:fontFamily="@font/abril_fatface"
         android:text="Factura"
         android:textAlignment="center"
         android:textColor="#FBFBFB"
@@ -227,9 +237,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.061" />
 
     <TextView
         android:id="@+id/lugar_enviofac"

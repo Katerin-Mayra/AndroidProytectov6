@@ -4,51 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/device_pick_gold_decoration_background"
     tools:context=".Registrar_Restaurant">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <EditText
+        android:id="@+id/idcliente"
+        android:layout_width="259dp"
+        android:layout_height="10dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/colorAccent2"
+        android:textColorHint="#ccc"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/namerestorant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrarrestautanteext"
+        app:layout_constraintVertical_bias="0.0" />
 
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/food_h5_background__1_"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <TextView
+        android:id="@+id/imgid"
+        android:layout_width="273dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Imagen"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/colorAccent2"
+        android:textColorHint="#ccc"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phonerestorant" />
 
     <RelativeLayout
-        android:layout_width="383dp"
-        android:layout_height="349dp"
-        android:layout_marginTop="12dp"
+        android:id="@+id/relativeLayout"
+        android:layout_width="410dp"
+        android:layout_height="217dp"
+        android:layout_marginBottom="72dp"
         android:background="#d8000000"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonerestorant"
-        app:layout_constraintVertical_bias="0.157">
-
-        <ImageButton
-            android:id="@+id/atrasVR3"
-            android:layout_width="65dp"
-            android:layout_height="66dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/ic_baseline_arrow_back_24" />
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.gms.maps.MapView
             android:id="@+id/MapView1"
-            android:layout_width="354dp"
-            android:layout_height="129dp"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentEnd="false"
-            android:layout_marginStart="26dp"
+            android:layout_width="323dp"
+            android:layout_height="95dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="49dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="36dp"
+            android:layout_marginEnd="38dp"
             tools:ignore="MissingConstraints" />
 
         <EditText
@@ -56,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:layout_above="@+id/MapView1"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/rectangle"
             android:ems="10"
             android:hint="Calle"
@@ -68,27 +88,13 @@
             android:textColorHint="#ccc"
             android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/crear"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/MapView1"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="55dp"
-            android:layout_marginEnd="103dp"
-            android:background="@drawable/rectangle"
-            android:text="Crear Restaurant"
-            android:textColor="@color/colorAccent"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints" />
     </RelativeLayout>
 
     <EditText
         android:id="@+id/namerestorant"
         android:layout_width="273dp"
         android:layout_height="39dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rectangle"
         android:ems="10"
@@ -107,7 +113,7 @@
         android:id="@+id/nit"
         android:layout_width="273dp"
         android:layout_height="39dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rectangle"
         android:ems="10"
@@ -126,7 +132,7 @@
         android:id="@+id/propietario"
         android:layout_width="273dp"
         android:layout_height="39dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rectangle"
         android:ems="10"
@@ -145,7 +151,7 @@
         android:id="@+id/phonerestorant"
         android:layout_width="273dp"
         android:layout_height="39dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rectangle"
         android:ems="10"
@@ -162,17 +168,19 @@
 
     <TextView
         android:id="@+id/registrarrestautanteext"
-        android:layout_width="267dp"
-        android:layout_height="40dp"
+        android:layout_width="347dp"
+        android:layout_height="72dp"
+        android:fontFamily="@font/vast_shadow"
         android:text="Registrar Restaurante"
+        android:textAlignment="center"
         android:textColor="@color/colorAccent3"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.743"
+        app:layout_constraintHorizontal_bias="0.616"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <ImageView
         android:id="@+id/fotoperfil2"
@@ -188,23 +196,23 @@
 
     <ImageButton
         android:id="@+id/atrasRRA"
-        android:layout_width="65dp"
-        android:layout_height="66dp"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="320dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/ic_baseline_arrow_back_24"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/idcliente"
-        android:layout_width="270dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="12dp"
+    <TextView
+        android:id="@+id/idclientedos"
+        android:layout_width="206dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="396dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Nombre"
@@ -214,9 +222,55 @@
         android:paddingRight="20dp"
         android:textColor="@color/colorAccent2"
         android:textColorHint="#ccc"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/namerestorant"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrarrestautanteext" />
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/crear"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:text="Crear Restaurant"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.333"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view16"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/imgbutton"
+        android:layout_width="81dp"
+        android:layout_height="61dp"
+        android:background="@drawable/ic_menu_camera"
+        android:backgroundTint="#EFAFAF"
+        android:backgroundTintMode="src_in"
+        android:drawableStart="@color/colorAccent3"
+        android:foregroundTint="#EC7171"
+        android:scrollbarThumbHorizontal="@color/colorAccent"
+        android:scrollbarThumbVertical="@color/colorAccent3"
+        android:textColorHighlight="#AA3C3C"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgid"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

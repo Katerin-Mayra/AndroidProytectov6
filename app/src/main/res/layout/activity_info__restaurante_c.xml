@@ -7,50 +7,14 @@
     android:background="@drawable/food_h5_background__1_"
     tools:context=".Info_RestauranteCA">
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Propietario :"
-        android:textColor="#E6E4ED"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/propertyIRV"
-        app:layout_constraintHorizontal_bias="0.743"
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_wave"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.856" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Telefono :"
-        android:textColor="#E6E4ED"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/telefonoIRV"
-        app:layout_constraintHorizontal_bias="0.472"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.741" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Direccion :"
-        android:textColor="#E6E4ED"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/calleIRV"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/fotoperfil7"
@@ -62,7 +26,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/text"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.05"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ImageButton
@@ -82,10 +46,71 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/calleIRV"
+        android:layout_width="228dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:text="Calle"
+        android:textColor="#000000"
+        android:textColorHint="#ccc"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreIRV"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propietario :"
+        android:textColor="#E6E4ED"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/propertyIRV"
+        app:layout_constraintHorizontal_bias="0.743"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        app:layout_constraintVertical_bias="0.204" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono :"
+        android:textColor="#E6E4ED"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/telefonoIRV"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direccion :"
+        android:textColor="#E6E4ED"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/calleIRV"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
         android:id="@+id/nombreIRV"
         android:layout_width="228dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="348dp"
         android:background="@drawable/rectangle"
         android:paddingLeft="10dp"
         android:paddingTop="9dp"
@@ -94,19 +119,17 @@
         android:textColor="#000000"
         android:textColorHint="#ccc"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/calleIRV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/telefonoIRV"
         android:layout_width="228dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/rectangle"
         android:paddingLeft="10dp"
         android:paddingTop="9dp"
@@ -115,12 +138,10 @@
         android:textColor="#000000"
         android:textColorHint="#ccc"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/propertyIRV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"
+        app:layout_constraintTop_toBottomOf="@+id/calleIRV"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -139,36 +160,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.873"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoIRV"
+        app:layout_constraintVertical_bias="0.163"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/calleIRV"
-        android:layout_width="228dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/rectangle"
-        android:paddingLeft="10dp"
-        android:paddingTop="9dp"
-        android:paddingRight="20dp"
-        android:text="Calle"
-        android:textColor="#000000"
-        android:textColorHint="#ccc"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/telefonoIRV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre :"
+        android:textColor="#E6E4ED"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nombreIRV"
+        app:layout_constraintHorizontal_bias="0.414"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.102" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="126dp"
         android:layout_height="118dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/nombreIRV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -184,7 +198,7 @@
         android:layout_height="111dp"
         android:layout_marginTop="66dp"
         android:fontFamily="@font/aclonica"
-        android:text="Informacion de Restaurante Cliente"
+        android:text="Informacion de Restaurante"
         android:textAlignment="center"
         android:textColor="#E8E6E6"
         android:textSize="30sp"
@@ -195,19 +209,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Nombre :"
-        android:textColor="#E6E4ED"
-        android:textSize="24sp"
+    <Button
+        android:id="@+id/llamarR"
+        android:layout_width="93dp"
+        android:layout_height="114dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/stat_sys_phone_call_forward"
+        android:fontFamily="@font/abril_fatface"
+        android:textAlignment="center"
+        android:textColor="#FDF8F8"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nombreIRV"
-        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.922"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintTop_toBottomOf="@+id/propertyIRV"
+        app:layout_constraintVertical_bias="0.818" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

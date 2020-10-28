@@ -80,7 +80,8 @@ public class Menu extends AppCompatActivity {
 
             }
         });
-
+//ocultar navegacion kato
+        getSupportActionBar().hide();
     }
     private void loadComponents() {
         AsyncHttpClient client = new AsyncHttpClient ();
