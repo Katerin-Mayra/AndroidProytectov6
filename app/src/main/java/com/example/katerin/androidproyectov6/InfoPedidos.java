@@ -126,8 +126,8 @@ public class InfoPedidos extends AppCompatActivity {
                 try {
                     String res=response.getString("msn");
                     Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
-                    Intent  pruebaED=new Intent(InfoPedidos.this,login.class);
-                    startActivity(pruebaED);
+                   /* Intent  pruebaED=new Intent(InfoPedidos.this,login.class);
+                    startActivity(pruebaED);*/
                 } catch (JSONException e) {
 
                     e.printStackTrace();

@@ -79,7 +79,7 @@ public class AMenuAdapter extends BaseAdapter {
                         .into(foto);
             } else {
                 Glide.with(context)
-                        .load(LISTMENUAdmi.get(position).getFoto())
+                        .load("https://image.freepik.com/vector-gratis/fachada-vintage-restaurante-estilo-plano_23-2147537665.jpg")
                         .centerCrop()
                         .into(foto);
             }

@@ -7,10 +7,32 @@
     android:background="@drawable/device_pick_gold_decoration_background"
     tools:context=".Registrar_Restaurant">
 
+    <TextView
+        android:id="@+id/idclientedosdos"
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="380dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/colorAccent2"
+        android:textColorHint="#ccc"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/idclientedos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.787" />
+
     <EditText
-        android:id="@+id/idcliente"
-        android:layout_width="259dp"
-        android:layout_height="10dp"
+        android:id="@+id/idclientejjjj"
+        android:layout_width="342dp"
+        android:layout_height="3dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Nombre"
@@ -23,10 +45,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/namerestorant"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrarrestautanteext"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.38" />
 
     <TextView
         android:id="@+id/imgid"
@@ -47,46 +69,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phonerestorant" />
 
+    <EditText
+        android:id="@+id/streetrestorant"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Calle"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/colorAccent2"
+        android:textColorHint="#ccc"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="410dp"
-        android:layout_height="217dp"
-        android:layout_marginBottom="72dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="484dp"
+        android:layout_marginBottom="75dp"
         android:background="#d8000000"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <com.google.android.gms.maps.MapView
             android:id="@+id/MapView1"
-            android:layout_width="323dp"
-            android:layout_height="95dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="49dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             tools:ignore="MissingConstraints" />
-
-        <EditText
-            android:id="@+id/streetrestorant"
-            android:layout_width="match_parent"
-            android:layout_height="43dp"
-            android:layout_above="@+id/MapView1"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/rectangle"
-            android:ems="10"
-            android:hint="Calle"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:paddingTop="9dp"
-            android:paddingRight="20dp"
-            android:textColor="@color/colorAccent2"
-            android:textColorHint="#ccc"
-            android:textSize="20dp" />
 
     </RelativeLayout>
 
@@ -170,6 +202,7 @@
         android:id="@+id/registrarrestautanteext"
         android:layout_width="347dp"
         android:layout_height="72dp"
+        android:layout_marginTop="7dp"
         android:fontFamily="@font/vast_shadow"
         android:text="Registrar Restaurante"
         android:textAlignment="center"
@@ -177,10 +210,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <ImageView
         android:id="@+id/fotoperfil2"
@@ -210,9 +243,9 @@
 
     <TextView
         android:id="@+id/idclientedos"
-        android:layout_width="206dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="396dp"
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="416dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Nombre"
@@ -223,18 +256,22 @@
         android:textColor="@color/colorAccent2"
         android:textColorHint="#ccc"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
 
     <Button
         android:id="@+id/crear"
-        android:layout_width="180dp"
+        android:layout_width="189dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle"
+        android:backgroundTint="#E43737"
+        android:fontFamily="@font/aclonica"
         android:text="Crear Restaurant"
-        android:textColor="@color/colorAccent"
+        android:textColor="#FFFCFC"
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -256,8 +293,9 @@
 
     <Button
         android:id="@+id/imgbutton"
-        android:layout_width="81dp"
-        android:layout_height="61dp"
+        android:layout_width="75dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/ic_menu_camera"
         android:backgroundTint="#EFAFAF"
         android:backgroundTintMode="src_in"
@@ -266,11 +304,11 @@
         android:scrollbarThumbHorizontal="@color/colorAccent"
         android:scrollbarThumbVertical="@color/colorAccent3"
         android:textColorHighlight="#AA3C3C"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintBottom_toTopOf="@+id/streetrestorant"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgid"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,6 +38,8 @@ public class CrearMenu extends AppCompatActivity {
     EditText producto,precio,descripcion;
     ImageView imagen;
     TextView _id;
+    TextView _idM;
+    TextView _idMenudimg;
     ListView listcrear;
     ArrayList<EsMenu> list_data = new ArrayList<> ();
 
@@ -45,7 +48,7 @@ public class CrearMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_menu);
         //istcrear=findViewById(R.id.);
-        foto = findViewById (R.id.tomarfotoCM);
+        foto = findViewById (R.id.tomarfotoMENU);
         producto = findViewById(R.id.productoCM);
         precio = findViewById(R.id.precioproductoCM);
         descripcion = findViewById(R.id.descripcionCM);
@@ -54,6 +57,11 @@ public class CrearMenu extends AppCompatActivity {
         _id=(TextView) findViewById(R.id.idRestauM);
         _id.setText( getIntent().getExtras().getString("_id"));
 
+        _idM=(TextView) findViewById(R.id.idimgdos);
+        _idM.setText( getIntent().getExtras().getString("_idM"));
+
+        _idMenudimg=(TextView) findViewById(R.id.idmenudeimg);
+        _idMenudimg.setText( getIntent().getExtras().getString("_idC"));
 
        // imagen = findViewById (R.id.fotomenu);
         aceptar.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +71,18 @@ public class CrearMenu extends AppCompatActivity {
                 sedData();
             }
         });
+
+
+        foto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent t=new Intent(CrearMenu.this,FotoRestauranteMenu.class);
+                t.putExtra("_id",_id.getText());
+                // t.putExtra("_id",_id);
+                startActivity(t);
+            }
+        });
+
 
 
        // loadComponents();
@@ -79,9 +99,31 @@ public class CrearMenu extends AppCompatActivity {
         final EditText precio  = findViewById(R.id.precioproductoCM);
         final EditText descripcion = findViewById(R.id.descripcionCM);
 
+        final TextView imagenes = findViewById(R.id.idimgdos);
+        _idMenudimg=(TextView) findViewById(R.id.idmenudeimg);
+        _idMenudimg.setText( getIntent().getExtras().getString("_idC"));
+
+
+        _idM=(TextView) findViewById(R.id.idimgdos);
+        _idM.setText( getIntent().getExtras().getString("_idM"));
+
         //final ImageView image = findViewById (R.id.fotomenu);
 
-        if (nombre.getText().toString().equals("") || precio.getText().toString().equals("") || descripcion.getText().toString().equals("")){
+        if (imagenes.length() <= 0){
+            Toast.makeText(this, "Debes ingresar una foto", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (nombre.length() <= 0){
+            Toast.makeText(this, "Debes ingresar el nombre del producto", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (precio.length() <= 0){
+            Toast.makeText(this, "Debes ingresar el precio del producto", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (nombre.getText().toString().equals("") || precio.getText().toString().equals("") || descripcion.getText().toString().equals("")|| imagenes.getText().toString().equals("")){
             Toast.makeText(this, "Los campos no pueden estar vacios", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -98,7 +140,8 @@ public class CrearMenu extends AppCompatActivity {
         params.put("nombre", nombre.getText().toString());
         params.put("precio", precio.getText().toString());
         params.put("descripcion",descripcion.getText().toString());
-        params.put("restaurante",_id.getText().toString());
+        params.put("restaurante",_idMenudimg.getText().toString());
+        params.put("foto",_idM.getText().toString());
 
         client .post(Data.REGISTER_MENUS, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {

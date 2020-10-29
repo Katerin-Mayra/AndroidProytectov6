@@ -16,102 +16,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/nombreCPC"
-        android:layout_width="246dp"
-        android:layout_height="47dp"
-
-
-        android:layout_marginTop="124dp"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
-        android:hint="Nombre"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="#9A9393"
-        android:textColorHint="@color/common_google_signin_btn_text_light_focused"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/precioCPC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.993"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.904"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/idmenuP"
-        android:layout_width="308dp"
-        android:layout_height="37dp"
-
-
-        android:background="@android:drawable/editbox_dropdown_light_frame"
-        android:hint="id"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="#9A9393"
-        android:textColorHint="@color/common_google_signin_btn_text_light_focused"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/precioCPC"
-        android:layout_width="246dp"
-        android:layout_height="47dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-
-        android:layout_marginTop="186dp"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
-        android:hint="Precio"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="#9A9393"
-        android:textColorHint="@color/common_google_signin_btn_text_light_default"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/descripcionCPC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.993"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/atrasVR9"
-        android:layout_width="65dp"
-        android:layout_height="66dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/ic_baseline_arrow_back_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
-
     <EditText
         android:id="@+id/lugar_envioCP"
-        android:layout_width="246dp"
+        android:layout_width="256dp"
         android:layout_height="47dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -133,15 +40,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.48"
+        app:layout_constraintVertical_bias="0.481"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/cantidadCP"
-        android:layout_width="246dp"
+        android:layout_width="256dp"
         android:layout_height="47dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -163,11 +70,133 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lugar_envioCP"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/idmenuP"
+        android:layout_width="308dp"
+        android:layout_height="37dp"
+
+
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:hint="id"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#9A9393"
+        android:textColorHint="@color/common_google_signin_btn_text_light_focused"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/nombreCPC"
+        android:layout_width="256dp"
+        android:layout_height="47dp"
+
+
+        android:layout_marginTop="124dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:hint="Nombre"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#9A9393"
+        android:textColorHint="@color/common_google_signin_btn_text_light_focused"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/precioCPC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.915"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/descripcionCPC"
+        android:layout_width="256dp"
+        android:layout_height="93dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginBottom="28dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:hint="Descripcion"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#9A9393"
+        android:textColorHint="@color/common_google_signin_btn_text_light_default"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lugar_envioCP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/precioCPC"
+        android:layout_width="256dp"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginTop="186dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:hint="Precio"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#9A9393"
+        android:textColorHint="@color/common_google_signin_btn_text_light_default"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/descripcionCPC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/atrasVR9"
+        android:layout_width="65dp"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
 
     <Button
         android:id="@+id/aceptarCPC"
@@ -178,8 +207,7 @@
         android:layout_alignParentBottom="true"
 
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="36dp"
         android:background="@drawable/rectangle"
         android:backgroundTint="#F11D1D"
         android:fontFamily="@font/aclonica"
@@ -192,8 +220,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.804"
         app:layout_constraintStart_toEndOf="@+id/cancelar"
-        app:layout_constraintTop_toBottomOf="@+id/cantidadCP"
-        app:layout_constraintVertical_bias="0.851" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876" />
 
     <Button
         android:id="@+id/cancelarCP"
@@ -203,7 +231,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="84dp"
         android:background="@drawable/rectangle"
         android:backgroundTint="#4755DF"
         android:fontFamily="@font/aclonica"
@@ -214,10 +241,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tomarfoto"
-        app:layout_constraintVertical_bias="0.589" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875" />
 
     <ImageView
         android:id="@+id/fotomenu"
@@ -231,56 +258,31 @@
         android:layout_marginTop="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/atrasVR9"
-        app:layout_constraintVertical_bias="0.101"
+        app:layout_constraintVertical_bias="0.116"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="225dp"
-        android:layout_height="107dp"
+        android:layout_width="286dp"
+        android:layout_height="112dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#EAE0E0"
         android:fontFamily="@font/bungee_shade"
         android:text="Crear Pedido"
         android:textAlignment="center"
-        android:textColor="#370101"
+        android:textColor="#000000"
+        android:textColorHighlight="#F8F5F5"
+        android:textColorHint="#FFFCFC"
+        android:textColorLink="#F1EFEF"
         android:textSize="36sp"
-        android:textStyle="bold"
+        android:textStyle="normal|bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/descripcionCPC"
-        android:layout_width="246dp"
-        android:layout_height="93dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-
-        android:layout_marginBottom="32dp"
-        android:background="@android:drawable/editbox_dropdown_light_frame"
-        android:hint="Descripcion"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="#9A9393"
-        android:textColorHint="@color/common_google_signin_btn_text_light_default"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/lugar_envioCP"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.993"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.996"
-        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

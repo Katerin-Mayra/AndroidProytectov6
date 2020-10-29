@@ -33,5 +33,6 @@
     <string name="Estado">Estado</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_login1">Login1</string>
+    <string name="title_activity_google">Map</string>
 
 </resources>

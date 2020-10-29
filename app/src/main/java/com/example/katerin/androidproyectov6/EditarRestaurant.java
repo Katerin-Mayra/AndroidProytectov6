@@ -3,6 +3,8 @@ package com.example.katerin.androidproyectov6;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +12,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.katerin.androidproyectov6.utils.Data;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -17,9 +27,21 @@ import com.loopj.android.http.RequestParams;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
 import cz.msebera.android.httpclient.Header;
 
-public class EditarRestaurant extends AppCompatActivity {
+public class EditarRestaurant extends AppCompatActivity implements OnMapReadyCallback{
+
+    private MapView map;
+    private GoogleMap mMap;
+    private Geocoder geocoder;
+    private LatLng mainposition;
+    private TextView street;
+    private Button next;
+
     TextView nombre1,telefono1,calle1;
     String nombreres,telefonores,calleres,id;
     Button guardar;
@@ -40,6 +62,16 @@ public class EditarRestaurant extends AppCompatActivity {
                 sedData();
             }
         });
+
+
+
+        map = findViewById(R.id.MapView2);
+
+        map.onCreate(savedInstanceState);
+        map.onResume();
+        MapsInitializer.initialize(this);
+        map.getMapAsync((OnMapReadyCallback) this);
+        geocoder = new Geocoder(getBaseContext(), Locale.getDefault());
 
 
 //ocultar navegacion kato
@@ -80,8 +112,8 @@ public class EditarRestaurant extends AppCompatActivity {
                 try {
                     String res=response.getString("msn");
                     Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
-                    Intent  pruebaED=new Intent(EditarRestaurant.this,Ver_Restaurante1.class);
-                    startActivity(pruebaED);
+                  /*  Intent  pruebaED=new Intent(EditarRestaurant.this,Admi1.class);
+                    startActivity(pruebaED);*/
                 } catch (JSONException e) {
 
                     e.printStackTrace();
@@ -96,5 +128,49 @@ public class EditarRestaurant extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
 
+        // Add a marker in Sydney and move the camera
+        //-19.5783329,-65.7563853
+        LatLng potosi = new LatLng(-19.5783329, -65.7563853);
+        mainposition = potosi;
+        mMap.addMarker(new MarkerOptions().position(potosi).title("Lugar").zIndex(17).draggable(true));
+        mMap.setMinZoomPreference(16);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(potosi));
+
+        mMap.setOnMarkerDragListener(new GoogleMap.OnMarkerDragListener() {
+            @Override
+            public void onMarkerDragStart(Marker marker) {
+
+            }
+
+            @Override
+            public void onMarkerDrag(Marker marker) {
+
+            }
+
+            @Override
+            public void onMarkerDragEnd(Marker marker) {
+                mainposition = marker.getPosition();
+                String street_string = getStreet(marker.getPosition().latitude, marker.getPosition().longitude);
+                street.setText(street_string);
+            }
+        });
+    }
+    public String getStreet (Double lat, Double lon) {
+        List<Address> address;
+        String result = "";
+        try {
+            address = geocoder.getFromLocation(lat, lon, 1);
+            result += address.get(0).getThoroughfare();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
 }

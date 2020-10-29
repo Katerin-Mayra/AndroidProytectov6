@@ -114,8 +114,8 @@
 
     <TextView
         android:id="@+id/lugar_envioVPAD"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/rectangle"
         android:hint="Lugar de Envio"
@@ -135,8 +135,8 @@
 
     <TextView
         android:id="@+id/cantidadVPAD"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/rectangle"
         android:hint="Cantidad"
@@ -156,18 +156,19 @@
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="180dp"
-        android:layout_height="68dp"
+        android:layout_width="254dp"
+        android:layout_height="75dp"
+        android:fontFamily="@font/aclonica"
         android:text="Informacion de Pedido"
         android:textAlignment="center"
         android:textColor="#F4F0F0"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.109" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

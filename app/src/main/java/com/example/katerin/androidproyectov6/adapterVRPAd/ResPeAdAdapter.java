@@ -83,7 +83,7 @@ public class ResPeAdAdapter extends BaseAdapter {
                         .into(image);
             }else{
                 Glide.with(context)
-                        .load(LISTRESTAURANTPAD.get(position).getImagen())
+                        .load("https://image.freepik.com/vector-gratis/fachada-vintage-restaurante-estilo-plano_23-2147537665.jpg")
                         .centerCrop()
                         .into(image);
             }

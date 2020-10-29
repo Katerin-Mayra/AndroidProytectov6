@@ -49,7 +49,7 @@
         android:text="Menus Administrador"
         android:textAlignment="center"
         android:textColor="#FBFBFB"
-        android:textSize="30sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:flow_verticalAlign="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,22 +64,21 @@
         android:layout_width="290dp"
         android:layout_height="40dp"
         android:layout_marginTop="184dp"
-        android:layout_marginBottom="40dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
         android:text="id"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/nombre2"
+        app:layout_constraintBottom_toTopOf="@+id/nombreRAD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/fotoperfil"
-        android:layout_width="82dp"
-        android:layout_height="107dp"
+        android:layout_width="96dp"
+        android:layout_height="117dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
@@ -90,7 +89,7 @@
 
     <TextView
         android:id="@+id/nombreRAD"
-        android:layout_width="290dp"
+        android:layout_width="280dp"
         android:layout_height="40dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
@@ -106,7 +105,7 @@
 
     <TextView
         android:id="@+id/calleRAD"
-        android:layout_width="290dp"
+        android:layout_width="280dp"
         android:layout_height="40dp"
         android:background="@drawable/rectangle"
         android:paddingStart="10dp"
@@ -122,7 +121,7 @@
 
     <TextView
         android:id="@+id/telefonoRAD"
-        android:layout_width="290dp"
+        android:layout_width="280dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/rectangle"
@@ -145,6 +144,7 @@
         android:layout_marginBottom="128dp"
         android:background="@drawable/rectangle"
         android:backgroundTint="@color/colorPrimaryDark"
+        android:fontFamily="@font/aclonica"
         android:text="Ver Menus"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
@@ -160,6 +160,7 @@
         android:layout_marginBottom="128dp"
         android:background="@drawable/rectangle"
         android:backgroundTint="@color/colorPrimaryDark"
+        android:fontFamily="@font/aclonica"
         android:text="Crear Menu"
         android:textColor="#FFFFFF"
         android:textSize="18sp"

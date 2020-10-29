@@ -137,7 +137,7 @@
 
     <Button
         android:id="@+id/vercarrito"
-        android:layout_width="150dp"
+        android:layout_width="167dp"
         android:layout_height="54dp"
         android:background="@drawable/rectangle"
         android:backgroundTint="#E0DDED"
@@ -159,7 +159,7 @@
 
     <Button
         android:id="@+id/reapedido"
-        android:layout_width="157dp"
+        android:layout_width="167dp"
         android:layout_height="54dp"
         android:layout_marginStart="32dp"
         android:background="@drawable/rectangle"
@@ -206,7 +206,7 @@
 
     <Button
         android:id="@+id/edicuenta"
-        android:layout_width="150dp"
+        android:layout_width="167dp"
         android:layout_height="54dp"
         android:layout_marginStart="38dp"
         android:layout_marginTop="8dp"

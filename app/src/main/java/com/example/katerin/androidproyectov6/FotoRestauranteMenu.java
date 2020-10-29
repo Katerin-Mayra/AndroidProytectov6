@@ -37,7 +37,8 @@ import java.io.IOException;
 
 import cz.msebera.android.httpclient.Header;
 
-public class FotoRestaurante extends AppCompatActivity {
+public class FotoRestauranteMenu extends AppCompatActivity {
+
     private  final int CODE = 100;
     private  final int CODE_PERMISSIONS = 101;
     private ImageView IMG;
@@ -48,26 +49,25 @@ public class FotoRestaurante extends AppCompatActivity {
 
     TextView _idCI;
     TextView _idCCC;
-  //  TextView _idC;
+    //  TextView _idC;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_foto_restaurante);
-
+        setContentView(R.layout.activity_foto_restaurante_menu);
 
         Intent iin=getIntent();
         Bundle b=iin.getExtras();
 
-        _idCI=(TextView) findViewById(R.id.idclienteCtres);
-        String j=(String)b.get("_idCdost");
+        _idCI=(TextView) findViewById(R.id.idmenuCtres);
+        String j=(String)b.get("_id");
         _idCI.setText(j);
 
 
-        btn = findViewById(R.id.tomarfoto);
+        btn = findViewById(R.id.tomarfotomenu);
 
-        SEND = findViewById(R.id.registrar);
-        IMG = findViewById(R.id.imgrestaurant);
+        SEND = findViewById(R.id.registrarmenu);
+        IMG = findViewById(R.id.imgmenu);
 
         btn.setVisibility(View.INVISIBLE);
         if (reviewPermissions()) {
@@ -82,7 +82,7 @@ public class FotoRestaurante extends AppCompatActivity {
                     AsyncHttpClient client = new AsyncHttpClient();
                     File img = new File(DATAIMAGE.path);
 
-                   // client.addHeader("authorization", Data.TOKEN);
+                    // client.addHeader("authorization", Data.TOKEN);
                     RequestParams params = new RequestParams();
 
                     try {
@@ -90,37 +90,37 @@ public class FotoRestaurante extends AppCompatActivity {
 
                         client.post(Data.REGISTER_IMG, params, new JsonHttpResponseHandler(){
                             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                                Toast.makeText(FotoRestaurante.this, "EXITO", Toast.LENGTH_LONG).show();
+                                Toast.makeText(FotoRestauranteMenu.this, "EXITO", Toast.LENGTH_LONG).show();
 
                                 //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONObject) was not overriden, but callback was received");
                                 try {
 
                                     int resp = response.getInt("resp");
-                                    Toast.makeText(FotoRestaurante.this, "respuesta:"+resp, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(FotoRestauranteMenu.this, "respuesta:"+resp, Toast.LENGTH_SHORT).show();
                                     if(resp==200){
                                         JSONObject json=response.getJSONObject("updateimg");
 
                                         //String token = response.getString("token");
 
-                                        String idI=json.getString("_id");
+                                        String idM=json.getString("_id");
 
                                         //Data.TOKEN="Data "+token;
-                                        Data.ID_User=idI;
+                                        Data.ID_User=idM;
 
-                                            Intent intent =new Intent(FotoRestaurante.this, Registrar_Restaurant.class);
-                                            intent.putExtra("_idI",idI);
-                                            intent.putExtra("_idC",_idCI.getText());
-                                            startActivity(intent);
-                                            finish();
+                                        Intent intent =new Intent(FotoRestauranteMenu.this, CrearMenu.class);
+                                        intent.putExtra("_idM",idM);
+                                        intent.putExtra("_idC",_idCI.getText());
+                                        startActivity(intent);
+                                        finish();
 
 
                                         //Toast.makeText(login.this, "Login correctamente: "+ token, Toast.LENGTH_SHORT).show();
-                                        Toast.makeText(FotoRestaurante.this, "registro correctamente: ", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(FotoRestauranteMenu.this, "registro correctamente: ", Toast.LENGTH_SHORT).show();
                                     }else{
-                                        Toast.makeText(FotoRestaurante.this, "error de envio", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(FotoRestauranteMenu.this, "error de envio", Toast.LENGTH_SHORT).show();
                                     }
                                 } catch (JSONException e) {
-                                    Toast.makeText(FotoRestaurante.this,e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(FotoRestauranteMenu.this,e.getMessage(), Toast.LENGTH_SHORT).show();
                                     e.printStackTrace();
                                 }
                             }
@@ -129,8 +129,8 @@ public class FotoRestaurante extends AppCompatActivity {
 
                     } catch(FileNotFoundException e) {}
                 }
-              //  startActivity(new Intent(FotoRestaurante.this,Info_Restaurante.class));
-             //  startActivity(new Intent(FotoRestaurante.this,Info_Restaurante.class));
+                //  startActivity(new Intent(FotoRestaurante.this,Info_Restaurante.class));
+                //  startActivity(new Intent(FotoRestaurante.this,Info_Restaurante.class));
             }
         });
 
@@ -138,15 +138,15 @@ public class FotoRestaurante extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                FotoRestaurante.this.startActivityForResult(camera, CODE);
+                FotoRestauranteMenu.this.startActivityForResult(camera, CODE);
 
             }
         });
 
         //ocultar navegacion kato
         getSupportActionBar().hide();
-
     }
+
 
     private boolean reviewPermissions() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
@@ -210,9 +210,6 @@ public class FotoRestaurante extends AppCompatActivity {
 
         }
     }
-
-
-
 
 
 }

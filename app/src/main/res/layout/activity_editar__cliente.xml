@@ -57,10 +57,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38" />
+        app:layout_constraintVertical_bias="0.391" />
 
     <ImageButton
         android:id="@+id/atrasVR10"
@@ -79,12 +79,12 @@
 
     <ImageView
         android:id="@+id/fotoperfil"
-        android:layout_width="0dp"
+        android:layout_width="89dp"
         android:layout_height="77dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher" />
 
@@ -94,40 +94,19 @@
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="140dp"
         android:background="@drawable/rectangle"
-        android:backgroundTint="#FADADA"
+        android:backgroundTint="#D62E2E"
         android:fontFamily="@font/abril_fatface"
         android:text="Guardar"
-        android:textColor="#000000"
+        android:textColor="#F4F3F3"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correo3"
-        app:layout_constraintVertical_bias="0.671" />
-
-    <EditText
-        android:id="@+id/ciEC"
-        android:layout_width="236dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="420dp"
-        android:background="@drawable/rectangle"
-        android:ems="10"
-        android:hint="CI"
-        android:inputType="numberDecimal"
-        android:paddingStart="10dp"
-        android:textColorHint="#ccc"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.908"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre3"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.804" />
 
     <EditText
         android:id="@+id/nombreEC"
@@ -145,17 +124,15 @@
         app:layout_constraintHorizontal_bias="0.908"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintVertical_bias="0.284" />
 
     <EditText
-        android:id="@+id/phoneEC"
+        android:id="@+id/ciEC"
         android:layout_width="236dp"
         android:layout_height="45dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="336dp"
         android:background="@drawable/rectangle"
         android:ems="10"
-        android:hint="Telefono"
+        android:hint="CI"
         android:inputType="numberDecimal"
         android:paddingStart="10dp"
         android:textColorHint="#ccc"
@@ -164,15 +141,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.908"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ci3"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreEC"
+        app:layout_constraintVertical_bias="0.077" />
 
     <EditText
         android:id="@+id/correoEC"
         android:layout_width="236dp"
         android:layout_height="45dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="252dp"
         android:background="@drawable/rectangle"
         android:ems="10"
         android:hint="Correo"
@@ -184,8 +159,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.908"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone3"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneEC"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <EditText
+        android:id="@+id/phoneEC"
+        android:layout_width="236dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Telefono"
+        android:inputType="numberDecimal"
+        android:paddingStart="10dp"
+        android:textColorHint="#ccc"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ciEC"
+        app:layout_constraintVertical_bias="0.097" />
 
     <TextView
         android:id="@+id/textView39"
@@ -200,21 +193,21 @@
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256" />
+        app:layout_constraintVertical_bias="0.278" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="218dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="12dp"
         android:fontFamily="@font/abril_fatface"
         android:text="Editar Cliente"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/nombre3"
-        app:layout_constraintEnd_toStartOf="@+id/fotoperfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.071" />

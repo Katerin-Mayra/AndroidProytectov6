@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/telon_de_teatro_cortina_ciego_cubierta_protectora_antecedentes__1_"
-    tools:context=".FotoRestaurante">
+    android:background="@drawable/telon_de_teatro_cortina_ciego_cubierta_protectora_antecedentes"
+    tools:context=".FotoRestauranteMenu">
 
     <View
         android:id="@+id/view18"
@@ -17,28 +17,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgrestaurant"
+        android:id="@+id/imgmenu"
         android:layout_width="365dp"
         android:layout_height="346dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="192dp"
         android:layout_marginEnd="3dp"
-        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
         android:paddingLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+        app:srcCompat="@drawable/ic_menu_camera" />
 
     <Button
-        android:id="@+id/registrar"
+        android:id="@+id/registrarmenu"
         android:layout_width="215dp"
         android:layout_height="74dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/rectangle"
         android:backgroundTint="#C13535"
         android:fontFamily="@font/abril_fatface"
@@ -57,40 +56,40 @@
         app:layout_constraintVertical_bias="0.464" />
 
     <ImageButton
-        android:id="@+id/tomarfoto"
-        android:layout_width="95dp"
-        android:layout_height="82dp"
+        android:id="@+id/tomarfotomenu"
+        android:layout_width="74dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/ic_menu_camera"
-        android:backgroundTint="#E8C5C5"
+        android:backgroundTint="#F4CCE2"
         android:onClick="tomarFoto"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/registrarmenu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgrestaurant"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imgmenu"
+        app:layout_constraintVertical_bias="0.409" />
 
     <TextView
-        android:id="@+id/idclienteCtres"
+        android:id="@+id/idmenuCtres"
         android:layout_width="376dp"
         android:layout_height="27dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="140dp"
         android:background="@drawable/rectangle"
         android:hint="id"
         android:text="id"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView47"
-        android:layout_width="333dp"
-        android:layout_height="95dp"
+        android:layout_width="334dp"
+        android:layout_height="75dp"
         android:fontFamily="@font/bungee_shade"
-        android:text="Imagen Restaurante"
+        android:text="Imagen Menu"
         android:textAlignment="center"
         android:textColor="#FBF5F5"
         android:textSize="30sp"

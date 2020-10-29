@@ -69,8 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadcomponents() {
         Ver_Restaurante=this.findViewById(R.id.restaurantes);
-        img=this.findViewById(R.id.img);
-        img2=this.findViewById(R.id.img2);
+
+        //img=this.findViewById(R.id.img);
+        //img2=this.findViewById(R.id.img2);
        // mapa=this.findViewById(R.id.mapa);
 
      //   registrarse = findViewById(R.id.register2);
@@ -143,23 +144,23 @@ public class MainActivity extends AppCompatActivity {
             }
         }));
 
-        img.setOnClickListener((new View.OnClickListener() {
+       /* img.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent ver_img =new Intent(root,pruebaimg.class);
                 root.startActivity(ver_img);
 
             }
-        }));
+        }));*/
 
-        img2.setOnClickListener((new View.OnClickListener() {
+      /*               img2.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ver_img =new Intent(root,FotoRestaurante.class);
+                Intent ver_img =new Intent(root,MapsActivity.class);
                 root.startActivity(ver_img);
 
             }
-        }));
+        }));*/
 
 
         /*

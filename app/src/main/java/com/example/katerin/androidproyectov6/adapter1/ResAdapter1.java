@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.collection.CircularArray;
+
 import com.bumptech.glide.Glide;
 import com.example.katerin.androidproyectov6.EditarRestaurant;
 import com.example.katerin.androidproyectov6.R;
@@ -76,6 +78,8 @@ public class ResAdapter1 extends BaseAdapter {
             ImageView image = convertView.findViewById (R.id.imagenVM);
             img12=LISTRESTAURANT.get(position).getImagen();
 
+            //Glide.with(context).load("http://192.168.1.102:7777/public/avatars" + restaurants.get(position).getImagen()).into(image);
+
             if(LISTRESTAURANT.get(position).getImagen().equals("No IMAGE")){
                 Glide.with(context)
                         .load("https://image.freepik.com/vector-gratis/plantilla-fondo-menu-restaurante_23-2147490036.jpg")
@@ -83,12 +87,21 @@ public class ResAdapter1 extends BaseAdapter {
                         .into(image);
             }else{
 
-               /* Glide.with(context)
+             // verimagen(img12);
+
+                Glide.with(context)
+
+                        .load("https://image.freepik.com/vector-gratis/fachada-vintage-restaurante-estilo-plano_23-2147537665.jpg")
+                        .centerCrop()
+                        .into(image)
+                ;
+
+           /*     Glide.with(context)
                         .load(LISTRESTAURANT.get(position).getImagen())
                         .centerCrop()
-                        .into(image)*/
+                        .into(image);*/
 
-                verimagen(img12);
+
             }
 
             final String id;
@@ -125,7 +138,7 @@ public class ResAdapter1 extends BaseAdapter {
                     AlertDialog dialog = builder.create();*/
                     //dialog.show();
                     Toast.makeText(context, "eliminado el restaurante id ="+id, Toast.LENGTH_LONG).show();
-                  //  deleteMenu(id);
+                    deleteMenu(id);
 
 
                 }
@@ -174,46 +187,13 @@ public class ResAdapter1 extends BaseAdapter {
 
 
     }
-/*
+
     private void deleteMenu(final String id) {
 
 
         AsyncHttpClient client = new AsyncHttpClient();
 
         client.delete("http://192.168.100.180:8000/api/1.0/restaurante" + "?id=" + id, new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                try {
-                    String message = response.getString("msn");
-                    if (message != null) {
-
-                        Toast.makeText(context, message, Toast.LENGTH_LONG).show();
-
-                        // loadComponents();
-                                /*BorrarMenuAdapter adapter = new BorrarMenuAdapter(view);
-      /*                                  adapter.notifyDataSetChanged();9*/
-
-
-    /*                } else {
-                        Toast.makeText(context, "Error al borrar", Toast.LENGTH_LONG).show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-
-
-
-
-        });
-    }
-*/
-    private void verimagen(final String img12) {
-
-
-        AsyncHttpClient client = new AsyncHttpClient();
-
-        client.get("http://192.168.100.180:8000/api/1.0/listarIMG" + "?id=" + img12, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
@@ -240,6 +220,40 @@ public class ResAdapter1 extends BaseAdapter {
 
         });
     }
+
+/*
+    private void verimagen(final String img12) {
+
+
+        AsyncHttpClient client = new AsyncHttpClient();
+
+        client.get("http://192.168.100.180:8000/api/1.0/listarIMG" + "?id=" + img12, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+                    String message = response.getString("msn");
+                    if (message != null) {
+
+                        Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+
+                        // loadComponents();
+                                /*BorrarMenuAdapter adapter = new BorrarMenuAdapter(view);
+                                        adapter.notifyDataSetChanged();9*/
+
+/*
+                   } else {
+                        Toast.makeText(context, "Error al al mostrar imagen", Toast.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+
+
+        });
+    }*/
 
 
 }
