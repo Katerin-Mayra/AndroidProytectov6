@@ -24,11 +24,11 @@
         android:textColor="#F3EFEF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintEnd_toStartOf="@+id/cantidadEP"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
+        app:layout_constraintTop_toBottomOf="@+id/textView30"
+        app:layout_constraintVertical_bias="0.15" />
 
     <ImageView
         android:id="@+id/fotoperfil3"
@@ -36,10 +36,10 @@
         android:layout_height="121dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.295"
+        app:layout_constraintVertical_bias="0.254"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ImageButton
@@ -57,7 +57,7 @@
 
     <EditText
         android:id="@+id/luegar_envioEP"
-        android:layout_width="248dp"
+        android:layout_width="240dp"
         android:layout_height="42dp"
         android:layout_marginBottom="76dp"
         android:background="@drawable/rectangle"
@@ -85,7 +85,6 @@
         android:layout_width="248dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="268dp"
         android:background="@drawable/rectangle"
@@ -103,7 +102,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/luegar_envioEP2" />
+        app:layout_constraintTop_toBottomOf="@+id/luegar_envioEP"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/guardarpedidoDP"
@@ -124,9 +124,10 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="188dp"
-        android:layout_height="95dp"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
         android:layout_marginTop="60dp"
+        android:fontFamily="@font/aclonica"
         android:text="Editar Pedido"
         android:textAlignment="center"
         android:textColor="#FDFCFC"

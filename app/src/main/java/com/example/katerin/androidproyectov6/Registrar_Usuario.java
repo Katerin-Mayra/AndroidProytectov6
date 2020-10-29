@@ -87,7 +87,7 @@ public class Registrar_Usuario extends AppCompatActivity {
         }
 
         if (name1.length()!=0 && ci1.length()!=0 && phone1.length()!=0 && correo11.length()!=0  && password11.length()!=7) {
-            Toast.makeText(this, "Se Registro Correctamente los datos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ERROR NO SE PUDO REGISTRAR USUARIO", Toast.LENGTH_SHORT).show();
             startActivity (new Intent(Registrar_Usuario.this, login.class));
 
 
@@ -127,6 +127,7 @@ public class Registrar_Usuario extends AppCompatActivity {
 
 
                 try {
+
 
                     String res=response.getString("msn");
                     Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
